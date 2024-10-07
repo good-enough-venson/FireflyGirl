@@ -17,7 +17,7 @@ const AVAILABLE_FIREFLIES = 4
 
 const flicker_rate = 1.5
 const max_detection_distance = 300
-const disperse_distance_range = Vector2(50, 165)
+const disperse_distance_range = Vector2(50, 100)
 var disperse_distance: float = 0
 
 var player_in_zone:Node2D = null
@@ -26,12 +26,13 @@ var rng = RandomNumberGenerator.new()
 
 func _ready() -> void:
 	disperse_distance = rng.randf_range(disperse_distance_range.x, disperse_distance_range.y)
+	animate_fireflies(0)
 
 func _process(delta: float) -> void:
 	# We want to scale the numbers of fireflies around by the distance from the player to the dispersal threshold.
 	# The closer the player, the more fireflies are lit. However, this shouldn't be a dead giveaway.
 	# The player needs to be somewhat unsure of how close she can get before the fireflies will scatter.
-	var lit_chance = 0
+	#var lit_chance = 0
 	#var _log = "fireflies log:"
 	
 	if player_in_zone:
@@ -39,25 +40,46 @@ func _process(delta: float) -> void:
 			player_in_zone.on_fireflies_displaced(self)
 			scatter()
 			return
-			
-		lit_chance = get_proximity(player_in_zone)
+		
+		animate_fireflies(get_proximity(player_in_zone))
+		#lit_chance = get_proximity(player_in_zone)
 		#print(lit_chance)
 	
-	flicker(firefly_1, delta, lit_chance)
-	flicker(firefly_2, delta, lit_chance)
-	flicker(firefly_3, delta, lit_chance)
-	flicker(firefly_4, delta, lit_chance)
-	flicker(firefly_5, delta, lit_chance)
-	flicker(firefly_6, delta, lit_chance)
+	#flicker(firefly_1, delta, lit_chance)
+	#flicker(firefly_2, delta, lit_chance)
+	#flicker(firefly_3, delta, lit_chance)
+	#flicker(firefly_4, delta, lit_chance)
+	#flicker(firefly_5, delta, lit_chance)
+	#flicker(firefly_6, delta, lit_chance)
 	
 func flicker(sprite:AnimatedSprite2D, delta:float, chance:float):
 	if rng.randf() < flicker_rate * delta:
 		sprite.visible = rng.randf() < chance
 
-func animate_fireflies(delta:float, amount:float):
-	var flies_needed = floor(amount * AVAILABLE_FIREFLIES)
-	var flies_count = 0
-
+func animate_fireflies(amount:float):
+	var flies_needed = min(ceil(
+		amount * fireflies_array.size()),
+		fireflies_array.size())
+		
+	if flies_needed <= 0: return
+	
+	var lit = fireflies_array.filter(func(fly): return fly.visible)
+	var unlit = fireflies_array.filter(func(fly): return !fly.visible)
+	
+	print("fireflies {l}/{t} -> {a}. Prox: {p}".format(
+		{"l":lit.size(), "t":flies_needed, "a":amount, "p":disperse_distance}))
+	
+	while lit.size() > flies_needed:
+		var _i = rng.randi() % lit.size()
+		lit[_i].visible = false
+		unlit.append(lit[_i])
+		lit.remove_at(_i)
+		
+	while lit.size() < flies_needed:
+		var _i = rng.randi() % unlit.size()
+		unlit[_i].visible = true
+		lit.append(unlit[_i])
+		unlit.remove_at(_i)
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.has_meta("is_player"):
