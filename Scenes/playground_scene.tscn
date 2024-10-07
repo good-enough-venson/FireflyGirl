@@ -1,0 +1,98 @@
+[gd_scene load_steps=9 format=4 uid="uid://fj8g4q07gf7m"]
+
+[ext_resource type="Texture2D" uid="uid://doyfe6gthnbcr" path="res://Sprites/Playground_scene.png" id="1_gvm8f"]
+[ext_resource type="Texture2D" uid="uid://q86q3cniif6v" path="res://Sprites/FireflyGirl_Props_sheet.png" id="2_f1v4c"]
+[ext_resource type="PackedScene" uid="uid://cgpugc1q0xkq5" path="res://Scenes/firefly_girl.tscn" id="3_uc28p"]
+[ext_resource type="PackedScene" uid="uid://c7o8o1caqm6ft" path="res://Scenes/fireflies.tscn" id="4_ll048"]
+[ext_resource type="PackedScene" uid="uid://cvdcikytkke3x" path="res://Scenes/warp_gate.tscn" id="5_gsmt0"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_wwra8"]
+normal = Vector2(0, 1)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qgamh"]
+texture = ExtResource("2_f1v4c")
+texture_region_size = Vector2i(64, 64)
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_6vr20"]
+tile_size = Vector2i(64, 64)
+sources/0 = SubResource("TileSetAtlasSource_qgamh")
+
+[node name="ForestScene" type="Node2D"]
+y_sort_enabled = true
+
+[node name="Background_sprites" type="Node2D" parent="."]
+position = Vector2(-875, -95)
+scale = Vector2(0.134521, 0.134521)
+metadata/_edit_lock_ = true
+
+[node name="FireflygirlForestbackground" type="Sprite2D" parent="Background_sprites"]
+z_index = -10
+scale = Vector2(1, 1)
+texture = ExtResource("1_gvm8f")
+metadata/_edit_lock_ = true
+
+[node name="FireflygirlForestbackground3" type="Sprite2D" parent="Background_sprites"]
+z_index = -10
+position = Vector2(12280.6, 0)
+scale = Vector2(1, 1)
+texture = ExtResource("1_gvm8f")
+metadata/_edit_lock_ = true
+
+[node name="FireflygirlForestbackground4" type="Sprite2D" parent="Background_sprites"]
+z_index = -10
+position = Vector2(8184.57, 0)
+scale = Vector2(1, 1)
+texture = ExtResource("1_gvm8f")
+metadata/_edit_lock_ = true
+
+[node name="FireflygirlForestbackground5" type="Sprite2D" parent="Background_sprites"]
+z_index = -10
+position = Vector2(4096, -6.10352e-05)
+scale = Vector2(1, 1)
+texture = ExtResource("1_gvm8f")
+metadata/_edit_lock_ = true
+
+[node name="worldBoundaries" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="worldBoundaries"]
+shape = SubResource("WorldBoundaryShape2D_wwra8")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="worldBoundaries"]
+shape = SubResource("WorldBoundaryShape2D_wwra8")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+z_index = -1
+tile_map_data = PackedByteArray("AAD6/wAAAAAAAAIAAAD7/wAAAAAAAAIAAAD8/wAAAAAAAAIAAAAAAAAAAAAAAAIAAAABAAAAAAAAAAIAAAACAAAAAAAAAAIAAAADAAAAAAAAAAIAAAAEAAAAAAAAAAIAAAAFAAAAAAAAAAIAAAAGAAAAAAAAAAIAAAD5/wIAAAABAAIAAAD5/wMAAAABAAIAAAD6/wIAAAABAAIAAAD6/wMAAAABAAIAAAD7/wIAAAABAAIAAAD7/wMAAAABAAIAAAD8/wIAAAABAAIAAAD8/wMAAAABAAIAAAD9/wEAAAABAAIAAAD9/wIAAAABAAIAAAD9/wMAAAABAAIAAAD+/wEAAAABAAIAAAD+/wIAAAABAAIAAAD+/wMAAAABAAIAAAD//wEAAAABAAIAAAD//wIAAAABAAIAAAD//wMAAAABAAIAAAAAAAIAAAABAAIAAAAAAAMAAAABAAIAAAABAAIAAAABAAIAAAABAAMAAAABAAIAAAACAAIAAAABAAIAAAACAAMAAAABAAIAAAADAAIAAAABAAIAAAADAAMAAAABAAIAAAAEAAEAAAABAAIAAAAEAAIAAAABAAIAAAAEAAMAAAABAAIAAAAFAAEAAAABAAIAAAAFAAIAAAABAAIAAAAFAAMAAAABAAIAAAAGAAEAAAABAAIAAAAGAAIAAAABAAIAAAAGAAMAAAABAAIAAAAHAAEAAAABAAIAAAAHAAIAAAABAAIAAAAHAAMAAAABAAIAAAAIAAEAAAABAAIAAAAIAAIAAAABAAIAAAAIAAMAAAABAAIAAAD2/wIAAAABAAIAAAD2/wMAAAABAAIAAAD3/wIAAAABAAIAAAD3/wMAAAABAAIAAAD4/wIAAAABAAIAAAD4/wMAAAABAAIAAAD0/wEAAAABAAIAAAD0/wIAAAABAAIAAAD0/wMAAAABAAIAAAD1/wEAAAABAAIAAAD1/wIAAAABAAIAAAD1/wMAAAABAAIAAAD0/wAAAAAAAAIAAAD1/wAAAAAAAAIAAAD2/wAAAAAAAAIAAAD3/wAAAAAAAAIAAAAHAAAAAAAAAAIAAAAIAAAAAAAAAAIAAAD0/wQAAAABAAIAAAD0/wUAAAABAAIAAAD1/wQAAAABAAIAAAD1/wUAAAABAAIAAAD2/wQAAAABAAIAAAD2/wUAAAABAAIAAAD3/wQAAAABAAIAAAD3/wUAAAABAAIAAAD4/wQAAAABAAIAAAD4/wUAAAABAAIAAAD5/wQAAAABAAIAAAD5/wUAAAABAAIAAAD6/wQAAAABAAIAAAD6/wUAAAABAAIAAAD7/wQAAAABAAIAAAD7/wUAAAABAAIAAAD8/wQAAAABAAIAAAD8/wUAAAABAAIAAAD9/wQAAAABAAIAAAD9/wUAAAABAAIAAAD+/wQAAAABAAIAAAD+/wUAAAABAAIAAAD//wQAAAABAAIAAAD//wUAAAABAAIAAAAAAAQAAAABAAIAAAAAAAUAAAABAAIAAAABAAQAAAABAAIAAAABAAUAAAABAAIAAAACAAQAAAABAAIAAAACAAUAAAABAAIAAAADAAQAAAABAAIAAAADAAUAAAABAAIAAAAEAAQAAAABAAIAAAAEAAUAAAABAAIAAAAFAAQAAAABAAIAAAAFAAUAAAABAAIAAAAGAAQAAAABAAIAAAAGAAUAAAABAAIAAAAHAAQAAAABAAIAAAAHAAUAAAABAAIAAAAIAAQAAAABAAIAAAAIAAUAAAABAAIAAADu/wAAAAAAAAIAAADu/wEAAAABAAIAAADu/wIAAAABAAIAAADu/wMAAAABAAIAAADu/wQAAAABAAIAAADu/wUAAAABAAIAAADv/wAAAAAAAAIAAADv/wEAAAABAAIAAADv/wIAAAABAAIAAADv/wMAAAABAAIAAADv/wQAAAABAAIAAADv/wUAAAABAAIAAADw/wAAAAAAAAIAAADw/wEAAAABAAIAAADw/wIAAAABAAIAAADw/wMAAAABAAIAAADw/wQAAAABAAIAAADw/wUAAAABAAIAAADx/wAAAAAAAAIAAADx/wEAAAABAAIAAADx/wIAAAABAAIAAADx/wMAAAABAAIAAADx/wQAAAABAAIAAADx/wUAAAABAAIAAADy/wAAAAAAAAIAAADy/wEAAAABAAIAAADy/wIAAAABAAIAAADy/wMAAAABAAIAAADy/wQAAAABAAIAAADy/wUAAAABAAIAAADz/wAAAAAAAAIAAADz/wEAAAABAAIAAADz/wIAAAABAAIAAADz/wMAAAABAAIAAADz/wQAAAABAAIAAADz/wUAAAABAAIAAAD4/wAAAAAAAAIAAAD5/wAAAAABAAIAAAADAAEAAAABAAIAAAACAAEAAAABAAIAAAABAAEAAAABAAIAAAAAAAEAAAABAAIAAAD//wAAAAAAAAIAAAD+/wAAAAAAAAIAAAD9/wAAAAAAAAIAAAD8/wEAAAABAAIAAAD7/wEAAAABAAIAAAD6/wEAAAABAAIAAAD5/wEAAAABAAIAAAD4/wEAAAABAAIAAAD3/wEAAAABAAIAAAD2/wEAAAABAAIAAAAJAAEAAAAAAAIAAAAJAAIAAAABAAIAAAAJAAMAAAABAAIAAAAJAAQAAAABAAIAAAAJAAUAAAABAAIAAAAKAAEAAAAAAAIAAAAKAAIAAAABAAIAAAAKAAMAAAABAAIAAAAKAAQAAAABAAIAAAAKAAUAAAABAAIAAAALAAEAAAAAAAIAAAALAAIAAAABAAIAAAALAAMAAAABAAIAAAALAAQAAAABAAIAAAALAAUAAAABAAIAAAAMAAEAAAAAAAIAAAAMAAIAAAABAAIAAAAMAAMAAAABAAIAAAAMAAQAAAABAAIAAAAMAAUAAAABAAIAAAAJAAAAAAAAAAIAAAAKAAAAAAAAAAIAAAALAAAAAAAAAAIAAAAMAAAAAAAAAAIAAAA=")
+tile_set = SubResource("TileSet_6vr20")
+
+[node name="FireflyGirl" parent="." instance=ExtResource("3_uc28p")]
+position = Vector2(-927, 246)
+
+[node name="Camera2D" type="Camera2D" parent="FireflyGirl"]
+position = Vector2(0, -15)
+zoom = Vector2(1.8, 1.8)
+position_smoothing_enabled = true
+position_smoothing_speed = 2.0
+
+[node name="Fireflies" parent="." instance=ExtResource("4_ll048")]
+position = Vector2(-349, 302)
+
+[node name="Fireflies3" parent="." instance=ExtResource("4_ll048")]
+position = Vector2(470, 304)
+
+[node name="Fireflies4" parent="." instance=ExtResource("4_ll048")]
+position = Vector2(-830, 84)
+
+[node name="Fireflies5" parent="." instance=ExtResource("4_ll048")]
+position = Vector2(624, 189)
+
+[node name="Fireflies2" parent="." instance=ExtResource("4_ll048")]
+position = Vector2(-48, 105)
+
+[node name="WarpGate" parent="." instance=ExtResource("5_gsmt0")]
+position = Vector2(692, 104)
+metadata/linked_to = "menu_scene"

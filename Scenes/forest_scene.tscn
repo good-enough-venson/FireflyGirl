@@ -60,35 +60,30 @@ metadata/_edit_lock_ = true
 
 [node name="FireflygirlForestbackground" type="Sprite2D" parent="Background_sprites"]
 z_index = -10
-scale = Vector2(1, 1)
 texture = ExtResource("25_lv4jn")
 metadata/_edit_lock_ = true
 
 [node name="FireflygirlForestbackground2" type="Sprite2D" parent="Background_sprites"]
 z_index = -10
 position = Vector2(16354.3, 0)
-scale = Vector2(1, 1)
 texture = ExtResource("25_lv4jn")
 metadata/_edit_lock_ = true
 
 [node name="FireflygirlForestbackground3" type="Sprite2D" parent="Background_sprites"]
 z_index = -10
 position = Vector2(12280.6, 0)
-scale = Vector2(1, 1)
 texture = ExtResource("25_lv4jn")
 metadata/_edit_lock_ = true
 
 [node name="FireflygirlForestbackground4" type="Sprite2D" parent="Background_sprites"]
 z_index = -10
 position = Vector2(8184.57, 0)
-scale = Vector2(1, 1)
 texture = ExtResource("25_lv4jn")
 metadata/_edit_lock_ = true
 
 [node name="FireflygirlForestbackground5" type="Sprite2D" parent="Background_sprites"]
 z_index = -10
 position = Vector2(4096, -6.10352e-05)
-scale = Vector2(1, 1)
 texture = ExtResource("25_lv4jn")
 metadata/_edit_lock_ = true
 
