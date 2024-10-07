@@ -13,7 +13,7 @@ var scatterfly_scene = preload("res://Scenes/fireflies_scatter.tscn")
 	$Firefly_1, $Firefly_2, $Firefly_3, $Firefly_4, $Firefly_5, $Firefly_6
 ]
 
-const AVAILABLE_FIREFLIES = 4
+const AVAILABLE_FIREFLIES = 3
 
 const flicker_rate = 1.5
 const max_detection_distance = 300
