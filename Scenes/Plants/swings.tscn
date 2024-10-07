@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://rhp6lk4lujn8"]
+
+[ext_resource type="Texture2D" uid="uid://b1xia2x3itabx" path="res://Sprites/Playground Equipment spritesheet.png" id="1_g43of"]
+
+[node name="swings" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -58)
+texture = ExtResource("1_g43of")
+region_enabled = true
+region_rect = Rect2(-4, 9.696, 132, 118)

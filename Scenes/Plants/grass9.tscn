@@ -1,11 +1,18 @@
 [gd_scene load_steps=2 format=3 uid="uid://d3cbsekenysh"]
 
-[ext_resource type="Texture2D" uid="uid://q86q3cniif6v" path="res://Sprites/FireflyGirl_Props_sheet.png" id="1_rqypj"]
+[ext_resource type="Texture2D" uid="uid://b1xia2x3itabx" path="res://Sprites/Playground Equipment spritesheet.png" id="1_30axw"]
 
 [node name="Plant" type="Node2D"]
+position = Vector2(-1, -28)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -7)
-texture = ExtResource("1_rqypj")
+texture = ExtResource("1_30axw")
 region_enabled = true
-region_rect = Rect2(101.228, 218.741, 21.5651, 21.3672)
+region_rect = Rect2(-7, -1.946, 136, 137)
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(0, -7)
+texture = ExtResource("1_30axw")
+region_enabled = true
+region_rect = Rect2(-7, -1.946, 136, 137)

@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://de3djplvqd4lt"]
+
+[ext_resource type="Texture2D" uid="uid://b1xia2x3itabx" path="res://Sprites/Playground Equipment spritesheet.png" id="1_xqivx"]
+
+[node name="Plant" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(4, -61)
+texture = ExtResource("1_xqivx")
+region_enabled = true
+region_rect = Rect2(121, 12.466, 127, 120)
