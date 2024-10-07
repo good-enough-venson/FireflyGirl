@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=4 uid="uid://uumv8kwxqpxj"]
+[gd_scene load_steps=44 format=4 uid="uid://uumv8kwxqpxj"]
 
 [ext_resource type="Texture2D" uid="uid://0odk6ufosfjp" path="res://Sprites/fireflygirl_forestbackground.png" id="1_oi688"]
 [ext_resource type="Texture2D" uid="uid://q86q3cniif6v" path="res://Sprites/FireflyGirl_Props_sheet.png" id="1_oy8td"]
@@ -54,9 +54,6 @@ texture_region_size = Vector2i(64, 64)
 tile_size = Vector2i(64, 64)
 sources/2 = SubResource("TileSetAtlasSource_31ptf")
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_wwra8"]
-normal = Vector2(0, 1)
-
 [node name="pond_scene" type="Node2D"]
 y_sort_enabled = true
 metadata/_edit_horizontal_guides_ = [-107.0]
@@ -96,11 +93,8 @@ texture = ExtResource("1_oi688")
 
 [node name="worldBoundaries" type="StaticBody2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="worldBoundaries"]
-shape = SubResource("WorldBoundaryShape2D_wwra8")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="worldBoundaries"]
-shape = SubResource("WorldBoundaryShape2D_wwra8")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="worldBoundaries"]
+polygon = PackedVector2Array(403, 562, 2229, 563, 2225, 11, -1209, 10, -1208, 568, 401, 562, 401, 586, -1231, 588, -1231, -9, 2258, -1, 2254, 586, 404, 586)
 
 [node name="TerrainObjects" type="Node2D" parent="."]
 y_sort_enabled = true
@@ -713,6 +707,9 @@ position = Vector2(-797, 213)
 [node name="Camera2D" type="Camera2D" parent="FireflyGirl"]
 position = Vector2(0, -15)
 zoom = Vector2(1.9, 1.9)
+limit_left = -1200
+limit_right = 2232
+limit_bottom = 568
 position_smoothing_enabled = true
 position_smoothing_speed = 2.0
 

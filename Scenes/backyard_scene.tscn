@@ -1,8 +1,8 @@
-[gd_scene load_steps=39 format=4 uid="uid://drup0g1u2ugb"]
+[gd_scene load_steps=38 format=4 uid="uid://bxww2kpmtr4vm"]
 
 [ext_resource type="Texture2D" uid="uid://doyfe6gthnbcr" path="res://Sprites/Playground_scene.png" id="1_khalt"]
 [ext_resource type="Texture2D" uid="uid://q86q3cniif6v" path="res://Sprites/FireflyGirl_Props_sheet.png" id="2_disbn"]
-[ext_resource type="PackedScene" path="res://Scenes/story_trigger.tscn" id="6_8kbsm"]
+[ext_resource type="PackedScene" uid="uid://dmdc8r2bn7avq" path="res://Scenes/story_trigger.tscn" id="6_8kbsm"]
 [ext_resource type="AudioStream" uid="uid://dho7ydkjrqgiq" path="res://Audio/SFX/lines-000.ogg" id="7_li53i"]
 [ext_resource type="AudioStream" uid="uid://cv66a36c42ywq" path="res://Audio/SFX/lines-001.ogg" id="8_odfkh"]
 [ext_resource type="AudioStream" uid="uid://b10ul5pg712c1" path="res://Audio/SFX/lines-002.ogg" id="9_4slwb"]
@@ -27,15 +27,12 @@
 [ext_resource type="PackedScene" uid="uid://km3ptdp3vnxp" path="res://Scenes/Obstacles/tree_9.tscn" id="28_v5njl"]
 [ext_resource type="PackedScene" uid="uid://ch21a8ltiyqce" path="res://Scenes/Obstacles/rock_4.tscn" id="29_ijwgx"]
 [ext_resource type="PackedScene" uid="uid://cx16te138m5c1" path="res://Scenes/Obstacles/tree_5.tscn" id="30_dmljg"]
-[ext_resource type="PackedScene" uid="uid://dihpk1wosuryo" path="res://Scenes/Plants/tree_13.tscn" id="31_ktkgs"]
+[ext_resource type="PackedScene" uid="uid://b8g8luyrpsonw" path="res://Scenes/Obstacles/tree_13.tscn" id="31_ktkgs"]
 [ext_resource type="PackedScene" uid="uid://c3a53xtwt6rm5" path="res://Scenes/Plants/bonzai.tscn" id="32_54uur"]
 [ext_resource type="PackedScene" uid="uid://cgpugc1q0xkq5" path="res://Scenes/firefly_girl.tscn" id="32_f0g0c"]
 [ext_resource type="PackedScene" uid="uid://c7o8o1caqm6ft" path="res://Scenes/fireflies.tscn" id="33_8d21v"]
 [ext_resource type="PackedScene" uid="uid://bd1fpsa30iflh" path="res://Scenes/Obstacles/tree_12.tscn" id="33_gv01w"]
 [ext_resource type="PackedScene" uid="uid://cvdcikytkke3x" path="res://Scenes/warp_gate.tscn" id="34_i8jev"]
-
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_wwra8"]
-normal = Vector2(0, 1)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qgamh"]
 texture = ExtResource("2_disbn")
@@ -303,11 +300,8 @@ texture = ExtResource("1_khalt")
 
 [node name="worldBoundaries" type="StaticBody2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="worldBoundaries"]
-shape = SubResource("WorldBoundaryShape2D_wwra8")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="worldBoundaries"]
-shape = SubResource("WorldBoundaryShape2D_wwra8")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="worldBoundaries"]
+polygon = PackedVector2Array(-417, 375, -417, 389, -1159, 388, -1160, -5, 1610, -7, 1608, 394, -411, 389, -411, 374, 1592, 376, 1592, 12, -1148, 8, -1147, 374)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 z_index = -1
