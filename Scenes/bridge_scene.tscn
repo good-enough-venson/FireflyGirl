@@ -1,16 +1,12 @@
-<<<<<<< HEAD
 [gd_scene load_steps=44 format=4 uid="uid://dxsxu0s0tlckr"]
-=======
-[gd_scene load_steps=41 format=4 uid="uid://cnv0yly6dprlu"]
->>>>>>> 984f433b39f20e62c1aa6102b809453b21d221c3
 
 [ext_resource type="Texture2D" uid="uid://d24cb1ptgury4" path="res://Sprites/fireflygirl_streambackground.png" id="1_w54c5"]
 [ext_resource type="Texture2D" uid="uid://q86q3cniif6v" path="res://Sprites/FireflyGirl_Props_sheet.png" id="2_y4x1j"]
 [ext_resource type="PackedScene" uid="uid://cgpugc1q0xkq5" path="res://Scenes/firefly_girl.tscn" id="3_riobs"]
 [ext_resource type="PackedScene" uid="uid://c7o8o1caqm6ft" path="res://Scenes/fireflies.tscn" id="4_aaame"]
 [ext_resource type="PackedScene" uid="uid://cvdcikytkke3x" path="res://Scenes/warp_gate.tscn" id="5_v5t6g"]
-[ext_resource type="PackedScene" uid="uid://ccuqa0crbft5q" path="res://Scenes/Obstacles/Bridge.tscn" id="6_rpd8k"]
-[ext_resource type="PackedScene" path="res://Scenes/Obstacles/river.tscn" id="7_ux6m0"]
+[ext_resource type="PackedScene" uid="uid://dm0bvjiykf7dw" path="res://Scenes/Obstacles/Bridge.tscn" id="6_rpd8k"]
+[ext_resource type="PackedScene" uid="uid://bahxpiyinj1gd" path="res://Scenes/Obstacles/river.tscn" id="7_ux6m0"]
 [ext_resource type="PackedScene" uid="uid://tb01xu74lc7h" path="res://Scenes/Obstacles/rock_0.tscn" id="8_3x166"]
 [ext_resource type="PackedScene" uid="uid://c5qpehrcndy0r" path="res://Scenes/Obstacles/rock_1.tscn" id="9_ndv87"]
 [ext_resource type="PackedScene" uid="uid://bkjf2fkhr7edm" path="res://Scenes/Obstacles/rock_3.tscn" id="9_uorbq"]
@@ -18,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://qi7fjqngmkyo" path="res://Scenes/Obstacles/rock_5.tscn" id="11_w5gw4"]
 [ext_resource type="PackedScene" uid="uid://cbcalylxhxhdp" path="res://Scenes/Obstacles/rock_6.tscn" id="12_gtero"]
 [ext_resource type="PackedScene" uid="uid://cynenbvrjjco" path="res://Scenes/Obstacles/rock_7.tscn" id="13_igy7u"]
-[ext_resource type="PackedScene" uid="uid://dihpk1wosuryo" path="res://Scenes/Plants/tree_13.tscn" id="14_lik53"]
+[ext_resource type="PackedScene" path="res://Scenes/Obstacles/tree_13.tscn" id="14_lik53"]
 [ext_resource type="PackedScene" uid="uid://bd1fpsa30iflh" path="res://Scenes/Obstacles/tree_12.tscn" id="15_qg3av"]
 [ext_resource type="PackedScene" uid="uid://wr20rn00qtnw" path="res://Scenes/Obstacles/tree_11.tscn" id="16_bq2sj"]
 [ext_resource type="PackedScene" uid="uid://cux6bsdwrsdql" path="res://Scenes/Obstacles/tree_10.tscn" id="17_i20rm"]

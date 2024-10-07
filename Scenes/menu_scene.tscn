@@ -16,7 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://bkjf2fkhr7edm" path="res://Scenes/Obstacles/rock_3.tscn" id="13_newx4"]
 [ext_resource type="PackedScene" uid="uid://dmfsu7uwkqt8g" path="res://Scenes/Obstacles/tree_4.tscn" id="14_wu2pt"]
 [ext_resource type="PackedScene" uid="uid://qi7fjqngmkyo" path="res://Scenes/Obstacles/rock_5.tscn" id="15_xbsej"]
-[ext_resource type="PackedScene" path="res://Scenes/Obstacles/tree_13.tscn" id="16_ddjpe"]
+[ext_resource type="PackedScene" uid="uid://b8g8luyrpsonw" path="res://Scenes/Obstacles/tree_13.tscn" id="16_ddjpe"]
 [ext_resource type="PackedScene" uid="uid://c7o8o1caqm6ft" path="res://Scenes/fireflies.tscn" id="17_quk34"]
 [ext_resource type="PackedScene" uid="uid://cvdcikytkke3x" path="res://Scenes/warp_gate.tscn" id="19_5fks8"]
 [ext_resource type="PackedScene" uid="uid://cmmmsbb7w4xyd" path="res://Scenes/soundtrack_volume_affector.tscn" id="20_akjn5"]
