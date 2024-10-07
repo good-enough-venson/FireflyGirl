@@ -4,7 +4,7 @@ const VSPEED = 80.0
 const HSPEED = 120.0
 const JUMP_VELOCITY = 10
 const DEFAULT_GRAB_JUMP = 50
-const MAX_GRAB_JUMP = 150
+const MAX_GRAB_JUMP = 120
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 

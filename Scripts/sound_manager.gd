@@ -1,4 +1,7 @@
 extends Node2D
+class_name SoundManager
+
+static var SOUND_MANAGER: SoundManager = null
 
 const VOL_CHANGE_RATE = 1
 
@@ -25,6 +28,8 @@ var buffered_requests: Array[VolumeRequest] = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	SOUND_MANAGER = self
+	
 	for k in soundtrack_players.keys():
 		if soundtrack_players[k] != null:
 			var _r = VolumeRequest.new()

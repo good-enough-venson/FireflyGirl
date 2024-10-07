@@ -16,7 +16,7 @@ var scatterfly_scene = preload("res://Scenes/fireflies_scatter.tscn")
 const AVAILABLE_FIREFLIES = 3
 
 const flicker_rate = 1.5
-const max_detection_distance = 300
+const max_detection_distance = 250
 const disperse_distance_range = Vector2(50, 100)
 var disperse_distance: float = 0
 
@@ -41,7 +41,7 @@ func _process(delta: float) -> void:
 			scatter()
 			return
 		
-		animate_fireflies(get_proximity(player_in_zone))
+		animate_fireflies(get_proximity(player_in_zone, true))
 		#lit_chance = get_proximity(player_in_zone)
 		#print(lit_chance)
 	
@@ -105,9 +105,10 @@ func scatter():
 func on_grab_attempt(player:Node2D) -> int:
 	return floor(get_proximity(player) * AVAILABLE_FIREFLIES)
 
-func get_proximity(other:Node2D) -> float:
-	var distance = (player_in_zone.global_position - global_position).length() - disperse_distance
-	var perimeter = max_detection_distance - disperse_distance
+func get_proximity(other:Node2D, ignore_disperse_distance = false) -> float:
+	var disp_dist = 0 if ignore_disperse_distance else disperse_distance
+	var distance = (player_in_zone.global_position - global_position).length() - disp_dist
+	var perimeter = max_detection_distance - disp_dist
 	
 	if distance <= 0: return 1
 	if distance >= perimeter: return 0
