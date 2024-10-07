@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://bahxpiyinj1gd"]
+
+[ext_resource type="Texture2D" uid="uid://cblta0db640y0" path="res://Sprites/river_river.png" id="1_u0l3q"]
+
+[node name="Obstacle" type="StaticBody2D"]
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+texture = ExtResource("1_u0l3q")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PackedVector2Array(162, 322, 166, 190, 160, 68, 172, -85, 153, -221, 162, -322, -168, -320, -179, -245, -169, -106, -189, -40, -166, 76, -173, 157, -183, 231, -166, 318)
