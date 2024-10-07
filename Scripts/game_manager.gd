@@ -13,7 +13,9 @@ var preloaded_scenes = {
 	"menu_scene": preload("res://Scenes/menu_scene.tscn"),
 	"forest_scene": preload("res://Scenes/forest_scene.tscn"),
 	"pond_scene": preload("res://Scenes/pond_scene.tscn"),
-	"bridge_scene": preload("res://Scenes/bridge_scene.tscn")
+	"bridge_scene": preload("res://Scenes/bridge_scene.tscn"),
+	"backyard_scene": preload("res://Scenes/backyard_scene.tscn"),
+	"playground_scene": preload("res://Scenes/playground_scene.tscn")
 }
 
 # Called when the node enters the scene tree for the first time.

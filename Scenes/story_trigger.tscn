@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://dmdc8r2bn7avq"]
+[gd_scene load_steps=4 format=3 uid="uid://dmdc8r2bn7avq"]
 
 [ext_resource type="Script" path="res://Scripts/story_trigger.gd" id="1_3fgac"]
+[ext_resource type="Texture2D" uid="uid://b4qh67rfo0jos" path="res://Sprites/Lamp.png" id="2_a6kug"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2p5vw"]
 radius = 100.0
@@ -12,8 +13,13 @@ script = ExtResource("1_3fgac")
 bus = &"Lines"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -30)
 shape = SubResource("CircleShape2D_2p5vw")
 debug_color = Color(0.683191, 0.296489, 1, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1, -58)
+texture = ExtResource("2_a6kug")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="finished" from="AudioStreamPlayer2D" to="." method="_on_audio_stream_player_2d_finished"]
