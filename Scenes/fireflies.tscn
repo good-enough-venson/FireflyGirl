@@ -1066,6 +1066,7 @@ bus = &"Fireflies"
 parameters/looping = true
 
 [node name="detector" type="CollisionShape2D" parent="."]
+visible = false
 shape = SubResource("CircleShape2D_ygmuh")
 debug_color = Color(0.579312, 0.552241, 0.0423746, 0.0235294)
 
