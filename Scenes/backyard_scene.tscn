@@ -1,7 +1,12 @@
-[gd_scene load_steps=9 format=4 uid="uid://drup0g1u2ugb"]
+[gd_scene load_steps=14 format=4 uid="uid://bxww2kpmtr4vm"]
 
 [ext_resource type="Texture2D" uid="uid://doyfe6gthnbcr" path="res://Sprites/Playground_scene.png" id="1_khalt"]
 [ext_resource type="Texture2D" uid="uid://q86q3cniif6v" path="res://Sprites/FireflyGirl_Props_sheet.png" id="2_disbn"]
+[ext_resource type="PackedScene" uid="uid://dmdc8r2bn7avq" path="res://Scenes/story_trigger.tscn" id="6_8kbsm"]
+[ext_resource type="AudioStream" uid="uid://dho7ydkjrqgiq" path="res://Audio/SFX/lines-000.ogg" id="7_li53i"]
+[ext_resource type="AudioStream" uid="uid://cv66a36c42ywq" path="res://Audio/SFX/lines-001.ogg" id="8_odfkh"]
+[ext_resource type="AudioStream" uid="uid://b10ul5pg712c1" path="res://Audio/SFX/lines-002.ogg" id="9_4slwb"]
+[ext_resource type="AudioStream" uid="uid://b74hfbl6t0284" path="res://Audio/SFX/lines-003.ogg" id="10_0qyuc"]
 [ext_resource type="PackedScene" uid="uid://cgpugc1q0xkq5" path="res://Scenes/firefly_girl.tscn" id="32_f0g0c"]
 [ext_resource type="PackedScene" uid="uid://c7o8o1caqm6ft" path="res://Scenes/fireflies.tscn" id="33_8d21v"]
 [ext_resource type="PackedScene" uid="uid://cvdcikytkke3x" path="res://Scenes/warp_gate.tscn" id="34_i8jev"]
@@ -92,3 +97,32 @@ position = Vector2(-48, 105)
 [node name="WarpGate" parent="." instance=ExtResource("34_i8jev")]
 position = Vector2(1244, 132)
 metadata/linked_to = "menu_scene"
+
+[node name="Story Trigger" parent="." instance=ExtResource("6_8kbsm")]
+position = Vector2(-794, 156)
+
+[node name="AudioStreamPlayer2D" parent="Story Trigger" index="0"]
+stream = ExtResource("7_li53i")
+
+[node name="Story Trigger2" parent="." instance=ExtResource("6_8kbsm")]
+position = Vector2(-557, 254)
+
+[node name="AudioStreamPlayer2D" parent="Story Trigger2" index="0"]
+stream = ExtResource("8_odfkh")
+
+[node name="Story Trigger3" parent="." instance=ExtResource("6_8kbsm")]
+position = Vector2(-311, 222)
+
+[node name="AudioStreamPlayer2D" parent="Story Trigger3" index="0"]
+stream = ExtResource("9_4slwb")
+
+[node name="Story Trigger4" parent="." instance=ExtResource("6_8kbsm")]
+position = Vector2(-67, 136)
+
+[node name="AudioStreamPlayer2D" parent="Story Trigger4" index="0"]
+stream = ExtResource("10_0qyuc")
+
+[editable path="Story Trigger"]
+[editable path="Story Trigger2"]
+[editable path="Story Trigger3"]
+[editable path="Story Trigger4"]

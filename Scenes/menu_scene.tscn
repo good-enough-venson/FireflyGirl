@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=4 uid="uid://b51sg8eq48udf"]
+[gd_scene load_steps=29 format=4 uid="uid://b51sg8eq48udf"]
 
 [ext_resource type="Texture2D" uid="uid://q86q3cniif6v" path="res://Sprites/FireflyGirl_Props_sheet.png" id="1_5hwe1"]
 [ext_resource type="PackedScene" uid="uid://cgpugc1q0xkq5" path="res://Scenes/firefly_girl.tscn" id="2_xwn5d"]
@@ -20,6 +20,8 @@
 [ext_resource type="PackedScene" uid="uid://c7o8o1caqm6ft" path="res://Scenes/fireflies.tscn" id="17_quk34"]
 [ext_resource type="PackedScene" uid="uid://cvdcikytkke3x" path="res://Scenes/warp_gate.tscn" id="19_5fks8"]
 [ext_resource type="PackedScene" uid="uid://cmmmsbb7w4xyd" path="res://Scenes/soundtrack_volume_affector.tscn" id="20_akjn5"]
+[ext_resource type="PackedScene" uid="uid://dmdc8r2bn7avq" path="res://Scenes/story_trigger.tscn" id="21_6ewxr"]
+[ext_resource type="AudioStream" uid="uid://dho7ydkjrqgiq" path="res://Audio/SFX/lines-000.ogg" id="22_18wbo"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_kkwmr"]
 a = Vector2(-282, 4)
@@ -232,3 +234,11 @@ position = Vector2(1043, 771)
 metadata/track_name = "bells"
 metadata/volume_range = Vector2(-50, 0)
 metadata/_edit_lock_ = true
+
+[node name="Story Trigger" parent="." instance=ExtResource("21_6ewxr")]
+position = Vector2(1903, 68)
+
+[node name="AudioStreamPlayer2D" parent="Story Trigger" index="0"]
+stream = ExtResource("22_18wbo")
+
+[editable path="Story Trigger"]

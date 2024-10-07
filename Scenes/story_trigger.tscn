@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmdc8r2bn7avq"]
+
+[ext_resource type="Script" path="res://Scripts/story_trigger.gd" id="1_3fgac"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2p5vw"]
+radius = 100.0
+
+[node name="Story Trigger" type="Area2D"]
+script = ExtResource("1_3fgac")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+bus = &"Lines"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_2p5vw")
+debug_color = Color(0.683191, 0.296489, 1, 0)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="finished" from="AudioStreamPlayer2D" to="." method="_on_audio_stream_player_2d_finished"]
