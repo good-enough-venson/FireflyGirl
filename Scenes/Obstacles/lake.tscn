@@ -1,13 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://1q64pvctfc2h"]
+[gd_scene load_steps=2 format=3 uid="uid://n5oo2ss6k5mp"]
 
-[ext_resource type="Texture2D" uid="uid://cgxenvlmod8mu" path="res://Sprites/pond_sprite.png" id="1_3xa5n"]
+[ext_resource type="Texture2D" uid="uid://cgxenvlmod8mu" path="res://Sprites/pond_sprite.png" id="1_dldjr"]
 
 [node name="Obstacle" type="StaticBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -10)
-texture = ExtResource("1_3xa5n")
+texture = ExtResource("1_dldjr")
 region_rect = Rect2(7, 31, 47, 33)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
 polygon = PackedVector2Array(-154, 77, -108, 81, -36, 64, 43, 70, 191, 64, 222, 37, 251, 44, 297, 32, 322, 17, 333, -10, 304, -50, 253, -54, 247, -71, 200, -95, 82, -107, -15, -112, -138, -106, -184, -96, -226, -93, -267, -79, -279, -73, -294, -45, -329, -28, -331, -13, -334, -4, -356, 9, -340, 32, -312, 44, -281, 58, -235, 59, -212, 50, -187, 65)

@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://b48ekirnn2wn"]
+
+[ext_resource type="Texture2D" uid="uid://dfvcoqnovvbsk" path="res://Sprites/pondstuff_spritesheet.png" id="1_j0qge"]
+
+[node name="Plant" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -16)
+texture = ExtResource("1_j0qge")
+region_enabled = true
+region_rect = Rect2(343.737, 148.622, 48.9833, 42.9187)

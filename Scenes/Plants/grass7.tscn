@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://tv3nq6pr8lns"]
+
+[ext_resource type="Texture2D" uid="uid://q86q3cniif6v" path="res://Sprites/FireflyGirl_Props_sheet.png" id="1_bea30"]
+
+[node name="Plant" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -10)
+texture = ExtResource("1_bea30")
+region_enabled = true
+region_rect = Rect2(98.2953, 192.413, 20.378, 26.5112)
