@@ -1,0 +1,58 @@
+[gd_scene load_steps=9 format=3 uid="uid://dgntlklfg14lw"]
+
+[ext_resource type="Script" path="res://Scripts/game_manager.gd" id="1_wud0m"]
+[ext_resource type="Script" path="res://Scripts/sound_manager.gd" id="2_hvd2y"]
+[ext_resource type="AudioStream" uid="uid://cpysxugklecvg" path="res://Audio/soundtrack_strum.ogg" id="2_xhbsm"]
+[ext_resource type="AudioStream" uid="uid://bep1r36xlow" path="res://Audio/soundtrack_pluck.ogg" id="3_l2oxk"]
+[ext_resource type="AudioStream" uid="uid://cxrcyp0fw0sr8" path="res://Audio/soundtrack_chucks.ogg" id="4_iyouo"]
+[ext_resource type="AudioStream" uid="uid://btxct13o0gk1p" path="res://Audio/soundtrack_viola.ogg" id="5_luakf"]
+[ext_resource type="AudioStream" uid="uid://bulo8wox7to6b" path="res://Audio/soundtrack_flute.ogg" id="6_yb0m0"]
+[ext_resource type="AudioStream" uid="uid://jcf13armo8oa" path="res://Audio/soundtrack_bells.ogg" id="7_26x64"]
+
+[node name="GameManager" type="Node2D"]
+script = ExtResource("1_wud0m")
+
+[node name="SoundManager" type="Node2D" parent="."]
+script = ExtResource("2_hvd2y")
+
+[node name="soundtrack_strum" type="AudioStreamPlayer" parent="SoundManager"]
+stream = ExtResource("2_xhbsm")
+volume_db = -80.0
+autoplay = true
+bus = &"Strum"
+parameters/looping = false
+
+[node name="soundtrack_pluck" type="AudioStreamPlayer" parent="SoundManager"]
+stream = ExtResource("3_l2oxk")
+volume_db = -80.0
+autoplay = true
+bus = &"Pluck"
+parameters/looping = false
+
+[node name="soundtrack_chuck" type="AudioStreamPlayer" parent="SoundManager"]
+stream = ExtResource("4_iyouo")
+volume_db = -80.0
+autoplay = true
+bus = &"Chuck"
+parameters/looping = false
+
+[node name="soundtrack_viola" type="AudioStreamPlayer" parent="SoundManager"]
+stream = ExtResource("5_luakf")
+volume_db = -80.0
+autoplay = true
+bus = &"Viola"
+parameters/looping = false
+
+[node name="soundtrack_flute" type="AudioStreamPlayer" parent="SoundManager"]
+stream = ExtResource("6_yb0m0")
+volume_db = -80.0
+autoplay = true
+bus = &"Flute"
+parameters/looping = false
+
+[node name="soundtrack_bells" type="AudioStreamPlayer" parent="SoundManager"]
+stream = ExtResource("7_26x64")
+volume_db = -80.0
+autoplay = true
+bus = &"Bells"
+parameters/looping = false

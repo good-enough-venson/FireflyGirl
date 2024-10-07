@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://twjfrevetxyo"]
+
+[ext_resource type="Texture2D" uid="uid://q86q3cniif6v" path="res://Sprites/FireflyGirl_Props_sheet.png" id="1_koc0r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iyv5d"]
+size = Vector2(62, 9.5)
+
+[node name="Obstacle" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -9)
+texture = ExtResource("1_koc0r")
+region_enabled = true
+region_rect = Rect2(128, 39, 64, 25)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2)
+shape = SubResource("RectangleShape2D_iyv5d")

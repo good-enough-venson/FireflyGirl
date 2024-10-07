@@ -1,0 +1,169 @@
+[gd_scene load_steps=28 format=4 uid="uid://cvlsjjhtofstm"]
+
+[ext_resource type="Texture2D" uid="uid://q86q3cniif6v" path="res://Sprites/FireflyGirl_Props_sheet.png" id="1_3l8m1"]
+[ext_resource type="PackedScene" uid="uid://cgpugc1q0xkq5" path="res://Scenes/firefly_girl.tscn" id="2_5ip45"]
+[ext_resource type="PackedScene" uid="uid://tb01xu74lc7h" path="res://Scenes/Obstacles/rock_0.tscn" id="3_arnm2"]
+[ext_resource type="PackedScene" uid="uid://c5qpehrcndy0r" path="res://Scenes/Obstacles/rock_1.tscn" id="4_4luyp"]
+[ext_resource type="PackedScene" uid="uid://twjfrevetxyo" path="res://Scenes/Obstacles/rock_2.tscn" id="5_v80vi"]
+[ext_resource type="PackedScene" uid="uid://bkjf2fkhr7edm" path="res://Scenes/Obstacles/rock_3.tscn" id="6_2hjhw"]
+[ext_resource type="PackedScene" uid="uid://ch21a8ltiyqce" path="res://Scenes/Obstacles/rock_4.tscn" id="7_y0o7i"]
+[ext_resource type="PackedScene" uid="uid://qi7fjqngmkyo" path="res://Scenes/Obstacles/rock_5.tscn" id="8_2y5ig"]
+[ext_resource type="PackedScene" uid="uid://cbcalylxhxhdp" path="res://Scenes/Obstacles/rock_6.tscn" id="9_kykrc"]
+[ext_resource type="PackedScene" uid="uid://cynenbvrjjco" path="res://Scenes/Obstacles/rock_7.tscn" id="10_u4sv4"]
+[ext_resource type="PackedScene" uid="uid://b0duh2ojlg3s" path="res://Scenes/Obstacles/tree_3.tscn" id="11_n0d1g"]
+[ext_resource type="PackedScene" uid="uid://v26t6c8yqya4" path="res://Scenes/Obstacles/tree_1.tscn" id="12_rclv5"]
+[ext_resource type="PackedScene" uid="uid://dmfsu7uwkqt8g" path="res://Scenes/Obstacles/tree_4.tscn" id="13_sr6vw"]
+[ext_resource type="PackedScene" uid="uid://cx16te138m5c1" path="res://Scenes/Obstacles/tree_5.tscn" id="14_kom2r"]
+[ext_resource type="PackedScene" uid="uid://cc4dqwrvj0pvt" path="res://Scenes/Obstacles/tree_6.tscn" id="15_4fhqa"]
+[ext_resource type="PackedScene" uid="uid://bnhb26b22rxiq" path="res://Scenes/Obstacles/tree_7.tscn" id="16_on3h1"]
+[ext_resource type="PackedScene" uid="uid://v57uftxyh51q" path="res://Scenes/Obstacles/tree_8.tscn" id="17_qpssa"]
+[ext_resource type="PackedScene" uid="uid://km3ptdp3vnxp" path="res://Scenes/Obstacles/tree_9.tscn" id="18_u6d3i"]
+[ext_resource type="PackedScene" uid="uid://cux6bsdwrsdql" path="res://Scenes/Obstacles/tree_10.tscn" id="19_f7auh"]
+[ext_resource type="PackedScene" uid="uid://dihpk1wosuryo" path="res://Scenes/Obstacles/tree_13.tscn" id="20_q14lv"]
+[ext_resource type="PackedScene" uid="uid://bd1fpsa30iflh" path="res://Scenes/Obstacles/tree_12.tscn" id="21_namhx"]
+[ext_resource type="PackedScene" uid="uid://wr20rn00qtnw" path="res://Scenes/Obstacles/tree_11.tscn" id="22_7p3j1"]
+[ext_resource type="PackedScene" uid="uid://c7o8o1caqm6ft" path="res://Scenes/fireflies.tscn" id="23_ujaec"]
+[ext_resource type="PackedScene" uid="uid://cvdcikytkke3x" path="res://Scenes/warp_gate.tscn" id="24_v2yut"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_wwra8"]
+normal = Vector2(0, 1)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qgamh"]
+texture = ExtResource("1_3l8m1")
+texture_region_size = Vector2i(64, 64)
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_6vr20"]
+tile_size = Vector2i(64, 64)
+sources/0 = SubResource("TileSetAtlasSource_qgamh")
+
+[node name="ForestScene" type="Node2D"]
+y_sort_enabled = true
+
+[node name="worldBoundaries" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="worldBoundaries"]
+shape = SubResource("WorldBoundaryShape2D_wwra8")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="worldBoundaries"]
+shape = SubResource("WorldBoundaryShape2D_wwra8")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+z_index = -1
+tile_map_data = PackedByteArray("AAD5/wAAAAAAAAIAAAD6/wAAAAAAAAIAAAD7/wAAAAAAAAIAAAD8/wAAAAAAAAIAAAD9/wAAAAAAAAIAAAD+/wAAAAAAAAIAAAD//wAAAAAAAAIAAAAAAAAAAAAAAAIAAAABAAAAAAAAAAIAAAACAAAAAAAAAAIAAAADAAAAAAAAAAIAAAAEAAAAAAAAAAIAAAAFAAAAAAAAAAIAAAAGAAAAAAAAAAIAAAD5/wEAAAABAAIAAAD5/wIAAAABAAIAAAD5/wMAAAABAAIAAAD6/wEAAAABAAIAAAD6/wIAAAABAAIAAAD6/wMAAAABAAIAAAD7/wEAAAABAAIAAAD7/wIAAAABAAIAAAD7/wMAAAABAAIAAAD8/wEAAAABAAIAAAD8/wIAAAABAAIAAAD8/wMAAAABAAIAAAD9/wEAAAABAAIAAAD9/wIAAAABAAIAAAD9/wMAAAABAAIAAAD+/wEAAAABAAIAAAD+/wIAAAABAAIAAAD+/wMAAAABAAIAAAD//wEAAAABAAIAAAD//wIAAAABAAIAAAD//wMAAAABAAIAAAAAAAEAAAABAAIAAAAAAAIAAAABAAIAAAAAAAMAAAABAAIAAAABAAEAAAABAAIAAAABAAIAAAABAAIAAAABAAMAAAABAAIAAAACAAEAAAABAAIAAAACAAIAAAABAAIAAAACAAMAAAABAAIAAAADAAEAAAABAAIAAAADAAIAAAABAAIAAAADAAMAAAABAAIAAAAEAAEAAAABAAIAAAAEAAIAAAABAAIAAAAEAAMAAAABAAIAAAAFAAEAAAABAAIAAAAFAAIAAAABAAIAAAAFAAMAAAABAAIAAAAGAAEAAAABAAIAAAAGAAIAAAABAAIAAAAGAAMAAAABAAIAAAAHAAEAAAABAAIAAAAHAAIAAAABAAIAAAAHAAMAAAABAAIAAAAIAAEAAAABAAIAAAAIAAIAAAABAAIAAAAIAAMAAAABAAIAAAAJAAEAAAABAAIAAAAJAAIAAAABAAIAAAAJAAMAAAABAAIAAAAKAAEAAAABAAIAAAAKAAIAAAABAAIAAAAKAAMAAAABAAIAAAALAAEAAAABAAIAAAALAAIAAAABAAIAAAALAAMAAAABAAIAAAD2/wEAAAABAAIAAAD2/wIAAAABAAIAAAD2/wMAAAABAAIAAAD3/wEAAAABAAIAAAD3/wIAAAABAAIAAAD3/wMAAAABAAIAAAD4/wEAAAABAAIAAAD4/wIAAAABAAIAAAD4/wMAAAABAAIAAAD0/wEAAAABAAIAAAD0/wIAAAABAAIAAAD0/wMAAAABAAIAAAD1/wEAAAABAAIAAAD1/wIAAAABAAIAAAD1/wMAAAABAAIAAAD0/wAAAAAAAAIAAAD1/wAAAAAAAAIAAAD2/wAAAAAAAAIAAAD3/wAAAAAAAAIAAAD4/wAAAAAAAAIAAAAHAAAAAAAAAAIAAAAIAAAAAAAAAAIAAAAJAAAAAAAAAAIAAAAKAAAAAAAAAAIAAAALAAAAAAAAAAIAAAD0/wQAAAABAAIAAAD0/wUAAAABAAIAAAD0/wYAAAABAAIAAAD0/wcAAAABAAIAAAD1/wQAAAABAAIAAAD1/wUAAAABAAIAAAD1/wYAAAABAAIAAAD1/wcAAAABAAIAAAD2/wQAAAABAAIAAAD2/wUAAAABAAIAAAD2/wYAAAABAAIAAAD2/wcAAAABAAIAAAD3/wQAAAABAAIAAAD3/wUAAAABAAIAAAD3/wYAAAABAAIAAAD3/wcAAAABAAIAAAD4/wQAAAABAAIAAAD4/wUAAAABAAIAAAD4/wYAAAABAAIAAAD4/wcAAAABAAIAAAD5/wQAAAABAAIAAAD5/wUAAAABAAIAAAD5/wYAAAABAAIAAAD5/wcAAAABAAIAAAD6/wQAAAABAAIAAAD6/wUAAAABAAIAAAD6/wYAAAABAAIAAAD6/wcAAAABAAIAAAD7/wQAAAABAAIAAAD7/wUAAAABAAIAAAD7/wYAAAABAAIAAAD7/wcAAAABAAIAAAD8/wQAAAABAAIAAAD8/wUAAAABAAIAAAD8/wYAAAABAAIAAAD8/wcAAAABAAIAAAD9/wQAAAABAAIAAAD9/wUAAAABAAIAAAD9/wYAAAABAAIAAAD9/wcAAAABAAIAAAD+/wQAAAABAAIAAAD+/wUAAAABAAIAAAD+/wYAAAABAAIAAAD+/wcAAAABAAIAAAD//wQAAAABAAIAAAD//wUAAAABAAIAAAD//wYAAAABAAIAAAD//wcAAAABAAIAAAAAAAQAAAABAAIAAAAAAAUAAAABAAIAAAAAAAYAAAABAAIAAAAAAAcAAAABAAIAAAABAAQAAAABAAIAAAABAAUAAAABAAIAAAABAAYAAAABAAIAAAABAAcAAAABAAIAAAACAAQAAAABAAIAAAACAAUAAAABAAIAAAACAAYAAAABAAIAAAACAAcAAAABAAIAAAADAAQAAAABAAIAAAADAAUAAAABAAIAAAADAAYAAAABAAIAAAADAAcAAAABAAIAAAAEAAQAAAABAAIAAAAEAAUAAAABAAIAAAAEAAYAAAABAAIAAAAEAAcAAAABAAIAAAAFAAQAAAABAAIAAAAFAAUAAAABAAIAAAAFAAYAAAABAAIAAAAFAAcAAAABAAIAAAAGAAQAAAABAAIAAAAGAAUAAAABAAIAAAAGAAYAAAABAAIAAAAGAAcAAAABAAIAAAAHAAQAAAABAAIAAAAHAAUAAAABAAIAAAAHAAYAAAABAAIAAAAHAAcAAAABAAIAAAAIAAQAAAABAAIAAAAIAAUAAAABAAIAAAAIAAYAAAABAAIAAAAIAAcAAAABAAIAAAAJAAQAAAABAAIAAAAJAAUAAAABAAIAAAAJAAYAAAABAAIAAAAJAAcAAAABAAIAAAAKAAQAAAABAAIAAAAKAAUAAAABAAIAAAAKAAYAAAABAAIAAAAKAAcAAAABAAIAAAALAAQAAAABAAIAAAALAAUAAAABAAIAAAALAAYAAAABAAIAAAALAAcAAAABAAIAAAAMAAMAAAADAAIAAAAMAAQAAAADAAIAAAAMAAUAAAADAAIAAAAMAAYAAAADAAIAAAAMAAcAAAADAAIAAAANAAMAAAADAAIAAAANAAQAAAADAAIAAAANAAUAAAADAAIAAAANAAYAAAADAAIAAAANAAcAAAADAAIAAAAOAAMAAAADAAIAAAAOAAQAAAADAAIAAAAOAAUAAAADAAIAAAAOAAYAAAADAAIAAAAOAAcAAAADAAIAAAAPAAMAAAADAAIAAAAPAAQAAAADAAIAAAAPAAUAAAADAAIAAAAPAAYAAAADAAIAAAAPAAcAAAADAAIAAAAQAAMAAAADAAIAAAAQAAQAAAADAAIAAAAQAAUAAAADAAIAAAAQAAYAAAADAAIAAAAQAAcAAAADAAIAAAARAAMAAAADAAIAAAARAAQAAAADAAIAAAARAAUAAAADAAIAAAARAAYAAAADAAIAAAARAAcAAAADAAIAAAASAAMAAAADAAIAAAASAAQAAAADAAIAAAASAAUAAAADAAIAAAASAAYAAAADAAIAAAASAAcAAAADAAIAAAAMAAEAAAADAAIAAAAMAAIAAAADAAIAAAANAAEAAAADAAIAAAANAAIAAAADAAIAAAAOAAEAAAADAAIAAAAOAAIAAAADAAIAAAAPAAEAAAADAAIAAAAPAAIAAAADAAIAAAAQAAEAAAADAAIAAAAQAAIAAAADAAIAAAARAAEAAAADAAIAAAARAAIAAAADAAIAAAASAAEAAAADAAIAAAASAAIAAAADAAIAAAAMAAAAAAACAAIAAAANAAAAAAACAAIAAAAOAAAAAAACAAIAAAAPAAAAAAACAAIAAAAQAAAAAAACAAIAAAARAAAAAAACAAIAAAASAAAAAAACAAIAAAA=")
+tile_set = SubResource("TileSet_6vr20")
+
+[node name="TerrainObjects" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="Obstacle" parent="TerrainObjects" instance=ExtResource("3_arnm2")]
+position = Vector2(-106, 175)
+
+[node name="Obstacle2" parent="TerrainObjects" instance=ExtResource("4_4luyp")]
+position = Vector2(-70, 102)
+
+[node name="Obstacle3" parent="TerrainObjects" instance=ExtResource("5_v80vi")]
+position = Vector2(-71, 221)
+
+[node name="Obstacle4" parent="TerrainObjects" instance=ExtResource("6_2hjhw")]
+position = Vector2(110, 150)
+
+[node name="Obstacle5" parent="TerrainObjects" instance=ExtResource("7_y0o7i")]
+position = Vector2(173, 103)
+
+[node name="Obstacle6" parent="TerrainObjects" instance=ExtResource("8_2y5ig")]
+position = Vector2(282, 218)
+
+[node name="Obstacle7" parent="TerrainObjects" instance=ExtResource("9_kykrc")]
+position = Vector2(335, 146)
+
+[node name="Obstacle8" parent="TerrainObjects" instance=ExtResource("10_u4sv4")]
+position = Vector2(142, 240)
+
+[node name="Obstacle9" parent="TerrainObjects" instance=ExtResource("11_n0d1g")]
+position = Vector2(-160, 202)
+
+[node name="tree_1" parent="TerrainObjects" instance=ExtResource("12_rclv5")]
+position = Vector2(-208, 20)
+
+[node name="Obstacle11" parent="TerrainObjects" instance=ExtResource("11_n0d1g")]
+position = Vector2(-26, 35)
+
+[node name="Obstacle12" parent="TerrainObjects" instance=ExtResource("13_sr6vw")]
+position = Vector2(84, 62)
+
+[node name="Obstacle13" parent="TerrainObjects" instance=ExtResource("14_kom2r")]
+position = Vector2(-35, 234)
+
+[node name="Obstacle14" parent="TerrainObjects" instance=ExtResource("15_4fhqa")]
+position = Vector2(38, 246)
+
+[node name="Obstacle15" parent="TerrainObjects" instance=ExtResource("16_on3h1")]
+position = Vector2(-61, 31)
+
+[node name="Obstacle16" parent="TerrainObjects" instance=ExtResource("17_qpssa")]
+position = Vector2(253, 98)
+
+[node name="Obstacle17" parent="TerrainObjects" instance=ExtResource("18_u6d3i")]
+position = Vector2(345, 209)
+
+[node name="Obstacle18" parent="TerrainObjects" instance=ExtResource("19_f7auh")]
+position = Vector2(-105, 23)
+
+[node name="Obstacle10" parent="TerrainObjects" instance=ExtResource("20_q14lv")]
+position = Vector2(454, 122)
+
+[node name="Obstacle19" parent="TerrainObjects" instance=ExtResource("21_namhx")]
+position = Vector2(487, 221)
+
+[node name="Obstacle20" parent="TerrainObjects" instance=ExtResource("22_7p3j1")]
+position = Vector2(126, 180)
+
+[node name="Obstacle21" parent="TerrainObjects" instance=ExtResource("19_f7auh")]
+position = Vector2(27, 61)
+
+[node name="Obstacle22" parent="TerrainObjects" instance=ExtResource("16_on3h1")]
+position = Vector2(-337, 88)
+
+[node name="tree_2" parent="TerrainObjects" instance=ExtResource("12_rclv5")]
+position = Vector2(-316, 54)
+
+[node name="Obstacle23" parent="TerrainObjects" instance=ExtResource("11_n0d1g")]
+position = Vector2(-370, 73)
+
+[node name="Obstacle24" parent="TerrainObjects" instance=ExtResource("13_sr6vw")]
+position = Vector2(-441, 20)
+
+[node name="Obstacle25" parent="TerrainObjects" instance=ExtResource("14_kom2r")]
+position = Vector2(-462, 115)
+
+[node name="Obstacle26" parent="TerrainObjects" instance=ExtResource("15_4fhqa")]
+position = Vector2(-415, 76)
+
+[node name="Obstacle27" parent="TerrainObjects" instance=ExtResource("16_on3h1")]
+position = Vector2(-453, 243)
+
+[node name="Obstacle28" parent="TerrainObjects" instance=ExtResource("17_qpssa")]
+position = Vector2(-324, 250)
+
+[node name="FireflyGirl" parent="." instance=ExtResource("2_5ip45")]
+position = Vector2(20, 169)
+
+[node name="Camera2D" type="Camera2D" parent="FireflyGirl"]
+position = Vector2(0, -15)
+zoom = Vector2(1.8, 1.8)
+position_smoothing_enabled = true
+position_smoothing_speed = 2.0
+
+[node name="Fireflies" parent="." instance=ExtResource("23_ujaec")]
+position = Vector2(-397, 138)
+
+[node name="Fireflies2" parent="." instance=ExtResource("23_ujaec")]
+position = Vector2(419, 163)
+
+[node name="WarpGate" parent="." instance=ExtResource("24_v2yut")]
+position = Vector2(88, 429)
+metadata/linked_to = "menu_scene"

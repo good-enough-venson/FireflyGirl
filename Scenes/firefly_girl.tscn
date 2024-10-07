@@ -1,0 +1,121 @@
+[gd_scene load_steps=16 format=3 uid="uid://cgpugc1q0xkq5"]
+
+[ext_resource type="Texture2D" uid="uid://df5vhdys6efv1" path="res://Sprites/FireflyGirl_GirlSheet_walk.png" id="1_piqo2"]
+[ext_resource type="Script" path="res://Scripts/firefly_girl.gd" id="1_uawrq"]
+[ext_resource type="Texture2D" uid="uid://d1crkyy6uy6pg" path="res://Sprites/FireflyGirl_GirlSheet.png" id="2_txgi7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mil1g"]
+atlas = ExtResource("2_txgi7")
+region = Rect2(128, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ugk14"]
+atlas = ExtResource("2_txgi7")
+region = Rect2(192, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o2uqf"]
+atlas = ExtResource("2_txgi7")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vo6qe"]
+atlas = ExtResource("1_piqo2")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ur36b"]
+atlas = ExtResource("1_piqo2")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3pcsn"]
+atlas = ExtResource("1_piqo2")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_35s64"]
+atlas = ExtResource("1_piqo2")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g1kis"]
+atlas = ExtResource("1_piqo2")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f4jpb"]
+atlas = ExtResource("1_piqo2")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i5irm"]
+atlas = ExtResource("1_piqo2")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n6eoj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mil1g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mil1g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mil1g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ugk14")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o2uqf")
+}],
+"loop": false,
+"name": &"grab",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vo6qe")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ur36b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3pcsn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_35s64")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g1kis")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f4jpb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i5irm")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mwlgq"]
+radius = 5.0
+height = 22.0
+
+[node name="FireflyGirl" type="CharacterBody2D"]
+collision_layer = 3
+script = ExtResource("1_uawrq")
+metadata/is_player = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-3, -25)
+scale = Vector2(0.8, 0.8)
+sprite_frames = SubResource("SpriteFrames_n6eoj")
+animation = &"walk"
+autoplay = "idle"
+frame_progress = 0.220902
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -3)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_mwlgq")
