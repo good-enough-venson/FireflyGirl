@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://fj8g4q07gf7m"]
+[gd_scene load_steps=25 format=4 uid="uid://dygyqlykpidg1"]
 
 [ext_resource type="Texture2D" uid="uid://doyfe6gthnbcr" path="res://Sprites/Playground_scene.png" id="1_gvm8f"]
 [ext_resource type="Texture2D" uid="uid://q86q3cniif6v" path="res://Sprites/FireflyGirl_Props_sheet.png" id="2_f1v4c"]
@@ -6,9 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://c7o8o1caqm6ft" path="res://Scenes/fireflies.tscn" id="4_ll048"]
 [ext_resource type="PackedScene" uid="uid://cvdcikytkke3x" path="res://Scenes/warp_gate.tscn" id="5_gsmt0"]
 [ext_resource type="Texture2D" uid="uid://cpia0jsw6koad" path="res://Sprites/teranespritemap_3.png" id="6_cfd1x"]
-[ext_resource type="PackedScene" uid="uid://rhp6lk4lujn8" path="res://Scenes/Plants/swings.tscn" id="7_q43ky"]
-[ext_resource type="PackedScene" uid="uid://de3djplvqd4lt" path="res://Scenes/Plants/slide.tscn" id="8_fub75"]
-[ext_resource type="PackedScene" uid="uid://dihpk1wosuryo" path="res://Scenes/Plants/tree_13.tscn" id="9_wcocp"]
+[ext_resource type="PackedScene" path="res://Scenes/Plants/swings.tscn" id="7_q43ky"]
+[ext_resource type="PackedScene" path="res://Scenes/Plants/slide.tscn" id="8_fub75"]
+[ext_resource type="PackedScene" uid="uid://b8g8luyrpsonw" path="res://Scenes/Obstacles/tree_13.tscn" id="9_wcocp"]
 [ext_resource type="PackedScene" uid="uid://b48ekirnn2wn" path="res://Scenes/Plants/bush.tscn" id="10_mimje"]
 [ext_resource type="PackedScene" uid="uid://bd1fpsa30iflh" path="res://Scenes/Obstacles/tree_12.tscn" id="11_w5tvk"]
 [ext_resource type="PackedScene" uid="uid://wr20rn00qtnw" path="res://Scenes/Obstacles/tree_11.tscn" id="12_memcu"]
@@ -341,7 +341,7 @@ position = Vector2(-105, 57)
 
 [node name="WarpGate" parent="." instance=ExtResource("5_gsmt0")]
 position = Vector2(692, 104)
-metadata/linked_to = "menu_scene"
+metadata/linked_to = "pond_scene"
 
 [node name="TileMapLayer2" type="TileMapLayer" parent="."]
 y_sort_enabled = true

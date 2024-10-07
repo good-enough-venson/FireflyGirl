@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://rg0shledma8l"]
+
+[ext_resource type="Texture2D" uid="uid://1mdgygand0r2" path="res://Sprites/gamepagepicture.png" id="1_vher8"]
+[ext_resource type="PackedScene" uid="uid://cgpugc1q0xkq5" path="res://Scenes/firefly_girl.tscn" id="17_ul5kn"]
+
+[node name="MenuScene" type="Node2D"]
+y_sort_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_vher8")
+
+[node name="FireflyGirl" parent="." instance=ExtResource("17_ul5kn")]
+position = Vector2(1, 60)
+
+[node name="Camera2D" type="Camera2D" parent="FireflyGirl"]
+zoom = Vector2(2, 2)
+limit_left = -256
+limit_right = 6400
+limit_bottom = 128
+position_smoothing_enabled = true
+position_smoothing_speed = 3.0

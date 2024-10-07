@@ -699,7 +699,7 @@ position = Vector2(1818, 121)
 
 [node name="WarpGate" parent="." instance=ExtResource("24_di0vk")]
 position = Vector2(1556, 128)
-metadata/linked_to = "endgame_scene"
+metadata/linked_to = "menu_scene"
 
 [node name="FireflyGirl" parent="." instance=ExtResource("22_ddyn5")]
 position = Vector2(-797, 213)

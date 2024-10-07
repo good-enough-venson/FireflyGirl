@@ -1,18 +1,11 @@
 [gd_scene load_steps=2 format=3 uid="uid://d3cbsekenysh"]
 
-[ext_resource type="Texture2D" uid="uid://b1xia2x3itabx" path="res://Sprites/Playground Equipment spritesheet.png" id="1_30axw"]
+[ext_resource type="Texture2D" uid="uid://dfvcoqnovvbsk" path="res://Sprites/pondstuff_spritesheet.png" id="1_b01xo"]
 
 [node name="Plant" type="Node2D"]
-position = Vector2(-1, -28)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -7)
-texture = ExtResource("1_30axw")
+position = Vector2(1, -6)
+texture = ExtResource("1_b01xo")
 region_enabled = true
-region_rect = Rect2(-7, -1.946, 136, 137)
-
-[node name="Sprite2D2" type="Sprite2D" parent="."]
-position = Vector2(0, -7)
-texture = ExtResource("1_30axw")
-region_enabled = true
-region_rect = Rect2(-7, -1.946, 136, 137)
+region_rect = Rect2(241, 189, 33, 27)
