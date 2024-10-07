@@ -12,7 +12,8 @@ var currentLevel: Node2D
 var preloaded_scenes = {
 	"menu_scene": preload("res://Scenes/menu_scene.tscn"),
 	"forest_scene": preload("res://Scenes/forest_scene.tscn"),
-	"pond_scene": preload("res://Scenes/pond_scene.tscn")
+	"pond_scene": preload("res://Scenes/pond_scene.tscn"),
+	"bridge_scene": preload("res://Scenes/bridge_scene.tscn")
 }
 
 # Called when the node enters the scene tree for the first time.

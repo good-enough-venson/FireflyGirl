@@ -207,7 +207,7 @@ position = Vector2(1303, 39)
 
 [node name="WarpGate" parent="." instance=ExtResource("19_5fks8")]
 position = Vector2(2005, 66)
-metadata/linked_to = "forest_scene"
+metadata/linked_to = "bridge_scene"
 
 [node name="Fireflies3" parent="." instance=ExtResource("17_quk34")]
 position = Vector2(1643, 82)
@@ -218,13 +218,13 @@ position = Vector2(1643, 82)
 [node name="SoundtrackVolumeAffector" parent="." instance=ExtResource("20_akjn5")]
 position = Vector2(580, -731)
 metadata/track_name = "viola"
-metadata/volume_range = Vector2(-50, 0)
+metadata/volume_range = Vector2(-30, 20)
 metadata/_edit_lock_ = true
 
 [node name="SoundtrackVolumeAffector2" parent="." instance=ExtResource("20_akjn5")]
 position = Vector2(1999, 47)
 metadata/track_name = "strum"
-metadata/volume_range = Vector2(-35, -20)
+metadata/volume_range = Vector2(-15, 0)
 metadata/_edit_lock_ = true
 
 [node name="SoundtrackVolumeAffector3" parent="." instance=ExtResource("20_akjn5")]

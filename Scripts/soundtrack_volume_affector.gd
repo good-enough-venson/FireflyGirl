@@ -7,6 +7,7 @@ var valid_track_name = false
 var track_name = ""
 var volume_min = -80
 var volume_max = -80
+var initial_vol_set = false
 
 func _ready() -> void:
 	if not self.get_meta("track_name"): return
@@ -15,10 +16,21 @@ func _ready() -> void:
 	var _range: Vector2 = self.get_meta("volume_range", Vector2.ZERO)
 	volume_min = _range.x
 	volume_max = _range.y
+	
+	if player_in_zone and SoundManager.SOUND_MANAGER:
+		SoundManager.SOUND_MANAGER.change_soundtrack_volume(
+			track_name, lerp(volume_min, volume_max, get_proximity(player_in_zone)), true)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if not SoundManager.SOUND_MANAGER: return
 	if not player_in_zone: return
+	
+	if not initial_vol_set:
+		SoundManager.SOUND_MANAGER.change_soundtrack_volume(
+			track_name, lerp(volume_min, volume_max, get_proximity(player_in_zone)), true)
+		initial_vol_set = true
+	
 	var _vol = lerp(volume_min, volume_max, get_proximity(player_in_zone))
 	#print("vol: {v} prox: {p}".format({"v":_vol, "p":get_proximity(player_in_zone)}))
 	SoundManager.SOUND_MANAGER.change_soundtrack_volume(track_name, _vol)

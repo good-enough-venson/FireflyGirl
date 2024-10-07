@@ -53,12 +53,14 @@ func _process(delta: float) -> void:
 			#track.target_volume = get_request_vol(looping_tracks[_i].track_name)
 			track.target_volume = buffered_requests[_i].target_volume
 			var player = soundtrack_players[track.track_name]
-			player.volume_db = move_float(player.volume_db, track.target_volume, VOL_CHANGE_RATE)
+			player.volume_db = move_float(
+				player.volume_db, track.target_volume, 
+				VOL_CHANGE_RATE)
 			
-			bufferlog += "{n}({c}) -> {v}\t".format({
+			bufferlog += "{n}({c})\t-> {v}\t\t".format({
 				"n":buffered_requests[_i].track_name,
-				"c":player.volume_db,
-				"v":buffered_requests[_i].target_volume})
+				"c":round(player.volume_db*10)/10,
+				"v":round(buffered_requests[_i].target_volume*10)/10})
 			
 			if abs(player.volume_db - track.target_volume) < 2:
 				buffered_requests.remove_at(_i)
@@ -74,16 +76,16 @@ func _process(delta: float) -> void:
 			#buffered_requests.remove_at(buffered_requests.find(track))
 		#print(player.volume_db)
 
-func get_request_vol(track_name:String) -> float:
-	var _rr = buffered_requests.filter(func(__r): return __r.track_name == track_name)
-	if _rr.size() <= 0: return soundtrack_players[track_name].volume_db
-	
-	var _vol = 0
-	for _r in _rr:
-		_vol += _r.target_volume
-	
-	_vol /= _rr.size()
-	return _vol
+#func get_request_vol(track_name:String) -> float:
+	#var _rr = buffered_requests.filter(func(__r): return __r.track_name == track_name)
+	#if _rr.size() <= 0: return soundtrack_players[track_name].volume_db
+	#
+	#var _vol = 0
+	#for _r in _rr:
+		#_vol += _r.target_volume
+	#
+	#_vol /= _rr.size()
+	#return _vol
 
 func move_float(from:float, to:float, delta:float) -> float:
 	var _s = sign(to-from)
@@ -91,10 +93,17 @@ func move_float(from:float, to:float, delta:float) -> float:
 	_d = min(_d, delta)
 	return from + (_s * _d)
 
-func change_soundtrack_volume(track_name:String, volume:float):
+func change_soundtrack_volume(track_name:String, volume:float, override_lerp=false):
 	if soundtrack_players.has(track_name) and soundtrack_players[track_name] != null:
 		if abs(soundtrack_players[track_name].volume_db - volume) < 2:
 			return
+		
+		if override_lerp:
+			soundtrack_players[track_name].volume_db = volume
+			print("FORCE {n}({c})\t-> {v}\t\t".format({
+				"n":track_name,
+				"c":round(soundtrack_players[track_name].volume_db*10)/10,
+				"v":round(volume*10)/10}))
 		
 		var _vol = volume
 		var _c = 1
