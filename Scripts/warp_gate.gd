@@ -10,7 +10,7 @@ func _process(delta: float) -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.get_meta("is_player"):
-		var linked_level = get_meta("linked_to")
+		var linked_level:String = get_meta("linked_to")
 		print("Attempting warp to ({l})...".format({"l":linked_level}))
 		if GameManager.GAME_MANAGER != null:
 			print("Sending Warp Request.")
