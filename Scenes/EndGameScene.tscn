@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqseygs7r7v07"]
+
+[ext_resource type="Texture2D" uid="uid://1mdgygand0r2" path="res://Sprites/gamepagepicture.png" id="1_xgalx"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Gamepagepicture" type="Sprite2D" parent="."]
+position = Vector2(-1, 8)
+texture = ExtResource("1_xgalx")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.325, 0.325)
