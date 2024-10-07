@@ -11,12 +11,17 @@ var currentLevel: Node2D
 
 var preloaded_scenes = {
 	"menu_scene": preload("res://Scenes/menu_scene.tscn"),
-	"forest_scene": preload("res://Scenes/forest_scene.tscn")}
+	"forest_scene": preload("res://Scenes/forest_scene.tscn"),
+	"pond_scene": preload("res://Scenes/pond_scene.tscn")
+}
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	GAME_MANAGER = self
-	load_scene(FIRST_LEVEL)
+	var _ml = self.get_meta("first_level")
+	if _ml and preloaded_scenes.has(_ml):
+		load_scene(_ml)
+	else: load_scene(FIRST_LEVEL)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

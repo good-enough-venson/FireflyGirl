@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=4 uid="uid://cvlsjjhtofstm"]
+[gd_scene load_steps=39 format=4 uid="uid://cvlsjjhtofstm"]
 
 [ext_resource type="Texture2D" uid="uid://q86q3cniif6v" path="res://Sprites/FireflyGirl_Props_sheet.png" id="1_3l8m1"]
 [ext_resource type="PackedScene" uid="uid://cgpugc1q0xkq5" path="res://Scenes/firefly_girl.tscn" id="2_5ip45"]
@@ -34,6 +34,7 @@
 [ext_resource type="PackedScene" uid="uid://b48ekirnn2wn" path="res://Scenes/Plants/bush.tscn" id="31_pr7h7"]
 [ext_resource type="PackedScene" uid="uid://c3a53xtwt6rm5" path="res://Scenes/Plants/bonzai.tscn" id="32_jt3q2"]
 [ext_resource type="PackedScene" uid="uid://k6ubvalip41p" path="res://Scenes/Plants/grass.tscn" id="33_hq8l3"]
+[ext_resource type="PackedScene" uid="uid://cmmmsbb7w4xyd" path="res://Scenes/soundtrack_volume_affector.tscn" id="35_5k3dq"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_wwra8"]
 normal = Vector2(0, 1)
@@ -60,35 +61,30 @@ metadata/_edit_lock_ = true
 
 [node name="FireflygirlForestbackground" type="Sprite2D" parent="Background_sprites"]
 z_index = -10
-scale = Vector2(1, 1)
 texture = ExtResource("25_lv4jn")
 metadata/_edit_lock_ = true
 
 [node name="FireflygirlForestbackground2" type="Sprite2D" parent="Background_sprites"]
 z_index = -10
 position = Vector2(16354.3, 0)
-scale = Vector2(1, 1)
 texture = ExtResource("25_lv4jn")
 metadata/_edit_lock_ = true
 
 [node name="FireflygirlForestbackground3" type="Sprite2D" parent="Background_sprites"]
 z_index = -10
 position = Vector2(12280.6, 0)
-scale = Vector2(1, 1)
 texture = ExtResource("25_lv4jn")
 metadata/_edit_lock_ = true
 
 [node name="FireflygirlForestbackground4" type="Sprite2D" parent="Background_sprites"]
 z_index = -10
 position = Vector2(8184.57, 0)
-scale = Vector2(1, 1)
 texture = ExtResource("25_lv4jn")
 metadata/_edit_lock_ = true
 
 [node name="FireflygirlForestbackground5" type="Sprite2D" parent="Background_sprites"]
 z_index = -10
 position = Vector2(4096, -6.10352e-05)
-scale = Vector2(1, 1)
 texture = ExtResource("25_lv4jn")
 metadata/_edit_lock_ = true
 
@@ -474,4 +470,33 @@ position = Vector2(-48, 105)
 
 [node name="WarpGate" parent="." instance=ExtResource("24_v2yut")]
 position = Vector2(1244, 132)
-metadata/linked_to = "menu_scene"
+metadata/linked_to = "pond_scene"
+
+[node name="SoundtrackVolumeAffector" parent="." instance=ExtResource("35_5k3dq")]
+position = Vector2(-1219, 231)
+metadata/track_name = "strum"
+metadata/volume_range = Vector2(-65, -30)
+metadata/_edit_lock_ = true
+
+[node name="SoundtrackVolumeAffector2" parent="." instance=ExtResource("35_5k3dq")]
+position = Vector2(1243, 113)
+metadata/track_name = "flute"
+metadata/volume_range = Vector2(-65, -20)
+metadata/_edit_lock_ = true
+
+[node name="SoundtrackVolumeAffector3" parent="." instance=ExtResource("35_5k3dq")]
+position = Vector2(37, 515)
+metadata/track_name = "pluck"
+metadata/volume_range = Vector2(-80, -20)
+metadata/_edit_lock_ = true
+
+[node name="SoundtrackVolumeAffector4" parent="." instance=ExtResource("35_5k3dq")]
+position = Vector2(534, -907)
+metadata/track_name = "bells"
+metadata/volume_range = Vector2(-40, -25)
+metadata/_edit_lock_ = true
+
+[node name="SoundtrackVolumeAffector5" parent="." instance=ExtResource("35_5k3dq")]
+position = Vector2(1177, 167)
+metadata/track_name = "chuck"
+metadata/volume_range = Vector2(-80, -35)

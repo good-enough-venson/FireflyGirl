@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=4 uid="uid://d0hhe7kyn4dxm"]
+[gd_scene load_steps=45 format=4 uid="uid://uumv8kwxqpxj"]
 
 [ext_resource type="Texture2D" uid="uid://0odk6ufosfjp" path="res://Sprites/fireflygirl_forestbackground.png" id="1_oi688"]
 [ext_resource type="Texture2D" uid="uid://q86q3cniif6v" path="res://Sprites/FireflyGirl_Props_sheet.png" id="1_oy8td"]
@@ -24,7 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://wr20rn00qtnw" path="res://Scenes/Obstacles/tree_11.tscn" id="21_onubh"]
 [ext_resource type="PackedScene" uid="uid://cgpugc1q0xkq5" path="res://Scenes/firefly_girl.tscn" id="22_ddyn5"]
 [ext_resource type="PackedScene" uid="uid://c7o8o1caqm6ft" path="res://Scenes/fireflies.tscn" id="23_6x8ub"]
-[ext_resource type="PackedScene" uid="uid://n5oo2ss6k5mp" path="res://Scenes/Obstacles/lake.tscn" id="23_atiqx"]
+[ext_resource type="PackedScene" path="res://Scenes/Obstacles/lake.tscn" id="23_atiqx"]
 [ext_resource type="PackedScene" uid="uid://cvdcikytkke3x" path="res://Scenes/warp_gate.tscn" id="24_di0vk"]
 [ext_resource type="Texture2D" uid="uid://dfvcoqnovvbsk" path="res://Sprites/pondstuff_spritesheet.png" id="27_pub4r"]
 [ext_resource type="PackedScene" uid="uid://vry084d887i3" path="res://Scenes/Plants/bush2.tscn" id="28_ytsmb"]
@@ -40,6 +40,7 @@
 [ext_resource type="PackedScene" uid="uid://c3a53xtwt6rm5" path="res://Scenes/Plants/bonzai.tscn" id="38_v03lm"]
 [ext_resource type="PackedScene" uid="uid://8pr7m2oy0mgg" path="res://Scenes/Plants/grass6.tscn" id="39_vctir"]
 [ext_resource type="PackedScene" uid="uid://tv3nq6pr8lns" path="res://Scenes/Plants/grass7.tscn" id="40_qpofy"]
+[ext_resource type="PackedScene" uid="uid://cmmmsbb7w4xyd" path="res://Scenes/soundtrack_volume_affector.tscn" id="41_d8yrb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_31ptf"]
 texture = ExtResource("1_oy8td")
@@ -152,6 +153,9 @@ position = Vector2(-324, 478)
 [node name="Obstacle14" parent="TerrainObjects" instance=ExtResource("14_n0u3d")]
 position = Vector2(-617, 174)
 
+[node name="Obstacle48" parent="TerrainObjects" instance=ExtResource("14_n0u3d")]
+position = Vector2(-916, 227)
+
 [node name="Obstacle15" parent="TerrainObjects" instance=ExtResource("15_ocvub")]
 position = Vector2(-251, 448)
 
@@ -254,6 +258,12 @@ position = Vector2(1007, 52)
 
 [node name="Obstacle47" parent="TerrainObjects" instance=ExtResource("7_qwxt0")]
 position = Vector2(910, 47)
+
+[node name="Obstacle49" parent="TerrainObjects" instance=ExtResource("21_onubh")]
+position = Vector2(-1000, 347)
+
+[node name="Obstacle50" parent="TerrainObjects" instance=ExtResource("18_ci4vg")]
+position = Vector2(-960, 382)
 
 [node name="sprites" type="Node2D" parent="."]
 y_sort_enabled = true
@@ -421,7 +431,7 @@ position = Vector2(-605, 159)
 position = Vector2(-622, 274)
 
 [node name="Plant27" parent="sprites" instance=ExtResource("40_qpofy")]
-position = Vector2(-630, 170)
+position = Vector2(-898, 233)
 
 [node name="Plant28" parent="sprites" instance=ExtResource("32_ovjss")]
 position = Vector2(-560, 336)
@@ -695,6 +705,7 @@ position = Vector2(1818, 121)
 
 [node name="WarpGate" parent="." instance=ExtResource("24_di0vk")]
 position = Vector2(1556, 128)
+metadata/linked_to = "menu_scene"
 
 [node name="FireflyGirl" parent="." instance=ExtResource("22_ddyn5")]
 position = Vector2(-797, 213)
@@ -704,3 +715,36 @@ position = Vector2(0, -15)
 zoom = Vector2(1.9, 1.9)
 position_smoothing_enabled = true
 position_smoothing_speed = 2.0
+
+[node name="Obstacle" parent="." instance=ExtResource("10_r6dgn")]
+position = Vector2(-994, 74)
+
+[node name="Obstacle2" parent="." instance=ExtResource("13_ekxdm")]
+position = Vector2(-738, 436)
+
+[node name="SoundtrackVolumeAffector" parent="." instance=ExtResource("41_d8yrb")]
+position = Vector2(-891, 285)
+metadata/track_name = "flute"
+metadata/volume_range = Vector2(-65, -35)
+metadata/_edit_lock_ = true
+
+[node name="SoundtrackVolumeAffector2" parent="." instance=ExtResource("41_d8yrb")]
+position = Vector2(330, 796)
+metadata/track_name = "chuck"
+metadata/volume_range = Vector2(-40, -15)
+metadata/_edit_lock_ = true
+
+[node name="SoundtrackVolumeAffector3" parent="." instance=ExtResource("41_d8yrb")]
+position = Vector2(1559, 92)
+metadata/track_name = "strum"
+metadata/volume_range = Vector2(-80, -20)
+
+[node name="SoundtrackVolumeAffector4" parent="." instance=ExtResource("41_d8yrb")]
+position = Vector2(788, 263)
+metadata/track_name = "viola"
+metadata/volume_range = Vector2(-80, -20)
+
+[node name="SoundtrackVolumeAffector5" parent="." instance=ExtResource("41_d8yrb")]
+position = Vector2(-501, -375)
+metadata/track_name = "pluck"
+metadata/volume_range = Vector2(-55, -30)

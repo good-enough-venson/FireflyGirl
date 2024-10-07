@@ -66,8 +66,8 @@ func animate_fireflies(amount:float):
 	var lit = fireflies_array.filter(func(fly): return fly.visible)
 	var unlit = fireflies_array.filter(func(fly): return !fly.visible)
 	
-	print("fireflies {l}/{t} -> {a}. Prox: {p}".format(
-		{"l":lit.size(), "t":flies_needed, "a":amount, "p":disperse_distance}))
+	#print("fireflies {l}/{t} -> {a}. Prox: {p}".format(
+	#	{"l":lit.size(), "t":flies_needed, "a":amount, "p":disperse_distance}))
 	
 	while lit.size() > flies_needed:
 		var _i = rng.randi() % lit.size()
