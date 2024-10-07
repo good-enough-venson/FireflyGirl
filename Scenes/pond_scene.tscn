@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=4 uid="uid://d0hhe7kyn4dxm"]
+[gd_scene load_steps=44 format=4 uid="uid://uumv8kwxqpxj"]
 
 [ext_resource type="Texture2D" uid="uid://0odk6ufosfjp" path="res://Sprites/fireflygirl_forestbackground.png" id="1_oi688"]
 [ext_resource type="Texture2D" uid="uid://q86q3cniif6v" path="res://Sprites/FireflyGirl_Props_sheet.png" id="1_oy8td"]
@@ -24,7 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://wr20rn00qtnw" path="res://Scenes/Obstacles/tree_11.tscn" id="21_onubh"]
 [ext_resource type="PackedScene" uid="uid://cgpugc1q0xkq5" path="res://Scenes/firefly_girl.tscn" id="22_ddyn5"]
 [ext_resource type="PackedScene" uid="uid://c7o8o1caqm6ft" path="res://Scenes/fireflies.tscn" id="23_6x8ub"]
-[ext_resource type="PackedScene" uid="uid://n5oo2ss6k5mp" path="res://Scenes/Obstacles/lake.tscn" id="23_atiqx"]
+[ext_resource type="PackedScene" path="res://Scenes/Obstacles/lake.tscn" id="23_atiqx"]
 [ext_resource type="PackedScene" uid="uid://cvdcikytkke3x" path="res://Scenes/warp_gate.tscn" id="24_di0vk"]
 [ext_resource type="Texture2D" uid="uid://dfvcoqnovvbsk" path="res://Sprites/pondstuff_spritesheet.png" id="27_pub4r"]
 [ext_resource type="PackedScene" uid="uid://vry084d887i3" path="res://Scenes/Plants/bush2.tscn" id="28_ytsmb"]

@@ -1071,12 +1071,14 @@ shape = SubResource("CircleShape2D_ygmuh")
 debug_color = Color(0.579312, 0.552241, 0.0423746, 0.0235294)
 
 [node name="Firefly_1" type="AnimatedSprite2D" parent="."]
+visible = false
 sprite_frames = SubResource("SpriteFrames_jlp0j")
 animation = &"a_swarm1"
 autoplay = "a_swarm1"
 frame_progress = 0.0310007
 
 [node name="Firefly_2" type="AnimatedSprite2D" parent="."]
+visible = false
 sprite_frames = SubResource("SpriteFrames_jlp0j")
 animation = &"a_swarm2"
 autoplay = "a_swarm2"
@@ -1084,6 +1086,7 @@ frame_progress = 0.0983798
 speed_scale = 1.1
 
 [node name="Firefly_3" type="AnimatedSprite2D" parent="."]
+visible = false
 sprite_frames = SubResource("SpriteFrames_jlp0j")
 animation = &"a_swarm6"
 autoplay = "a_swarm3"
@@ -1091,6 +1094,7 @@ frame_progress = 0.549193
 speed_scale = 0.9
 
 [node name="Firefly_4" type="AnimatedSprite2D" parent="."]
+visible = false
 sprite_frames = SubResource("SpriteFrames_jlp0j")
 animation = &"a_swarm4"
 autoplay = "a_swarm4"
@@ -1098,6 +1102,7 @@ frame_progress = 0.359914
 speed_scale = 0.95
 
 [node name="Firefly_5" type="AnimatedSprite2D" parent="."]
+visible = false
 sprite_frames = SubResource("SpriteFrames_jlp0j")
 animation = &"a_swarm5"
 autoplay = "a_swarm5"
@@ -1105,6 +1110,7 @@ frame_progress = 0.230181
 speed_scale = 1.15
 
 [node name="Firefly_6" type="AnimatedSprite2D" parent="."]
+visible = false
 sprite_frames = SubResource("SpriteFrames_jlp0j")
 animation = &"a_swarm6"
 autoplay = "a_swarm6"
