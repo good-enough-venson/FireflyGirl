@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://ccuqa0crbft5q"]
+
+[ext_resource type="Texture2D" uid="uid://cblta0db640y0" path="res://Sprites/river_river.png" id="1_s6vcd"]
+[ext_resource type="Texture2D" uid="uid://b8xc4hp63yodx" path="res://Sprites/river_bridge.png" id="2_q1puf"]
+
+[node name="Obstacle" type="StaticBody2D"]
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+texture = ExtResource("1_s6vcd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -10)
+texture = ExtResource("2_q1puf")
+region_rect = Rect2(7, 31, 47, 33)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-170, -125, -180, -253, -163, -319, 162, -323, 153, -230, 160, -130, 192, -116, 257, -116, 273, -101, 254, -80, 203, -75, 163, -94, -173, -95, -205, -77, -259, -78, -277, -97, -264, -119, -189, -114)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-250, 88, -214, 37, -173, 17, 172, 16, 215, 44, 242, 87, 202, 108, 157, 110, 162, 316, -170, 319, -180, 226, -167, 107)
