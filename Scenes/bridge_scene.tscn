@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=4 uid="uid://dxsxu0s0tlckr"]
+[gd_scene load_steps=44 format=4 uid="uid://dxsxu0s0tlckr"]
 
 [ext_resource type="Texture2D" uid="uid://d24cb1ptgury4" path="res://Sprites/fireflygirl_streambackground.png" id="1_w54c5"]
 [ext_resource type="Texture2D" uid="uid://q86q3cniif6v" path="res://Sprites/FireflyGirl_Props_sheet.png" id="2_y4x1j"]
@@ -37,6 +37,9 @@
 [ext_resource type="PackedScene" uid="uid://dsjolpnslo4lg" path="res://Scenes/Plants/grass8.tscn" id="35_jy2lb"]
 [ext_resource type="PackedScene" uid="uid://d3cbsekenysh" path="res://Scenes/Plants/grass9.tscn" id="36_nedhf"]
 [ext_resource type="PackedScene" uid="uid://cmmmsbb7w4xyd" path="res://Scenes/soundtrack_volume_affector.tscn" id="37_wf2m2"]
+[ext_resource type="PackedScene" uid="uid://dmdc8r2bn7avq" path="res://Scenes/story_trigger.tscn" id="38_qaqrh"]
+[ext_resource type="AudioStream" uid="uid://76jj3fsp4tf8" path="res://Audio/SFX/lines-008.ogg" id="39_7jq3c"]
+[ext_resource type="AudioStream" uid="uid://bg228vd0hu8o5" path="res://Audio/SFX/lines-007.ogg" id="39_8c77d"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_wwra8"]
 normal = Vector2(0, 1)
@@ -118,19 +121,19 @@ position = Vector2(-362, 325)
 y_sort_enabled = true
 
 [node name="Fireflies" parent="Interactables" instance=ExtResource("4_aaame")]
-position = Vector2(-714, 33)
+position = Vector2(-719, 225)
 
 [node name="Fireflies3" parent="Interactables" instance=ExtResource("4_aaame")]
-position = Vector2(-971, 892)
+position = Vector2(-955, 1017)
 
 [node name="Fireflies4" parent="Interactables" instance=ExtResource("4_aaame")]
-position = Vector2(-601, 555)
+position = Vector2(-965, 476)
 
 [node name="Fireflies5" parent="Interactables" instance=ExtResource("4_aaame")]
 position = Vector2(171, 1059)
 
 [node name="Fireflies2" parent="Interactables" instance=ExtResource("4_aaame")]
-position = Vector2(-20, 160)
+position = Vector2(7, 181)
 
 [node name="WarpGate" parent="Interactables" instance=ExtResource("5_v5t6g")]
 position = Vector2(234, 144)
@@ -613,10 +616,25 @@ position = Vector2(-579, 310)
 position = Vector2(-563, 373)
 
 [node name="FireflyGirl" parent="." instance=ExtResource("3_riobs")]
-position = Vector2(-927, 246)
+position = Vector2(-992, 213)
 
 [node name="Camera2D" type="Camera2D" parent="FireflyGirl"]
 position = Vector2(0, -15)
 zoom = Vector2(1.8, 1.8)
 position_smoothing_enabled = true
 position_smoothing_speed = 2.0
+
+[node name="Story Trigger" parent="." instance=ExtResource("38_qaqrh")]
+position = Vector2(-699, 752)
+
+[node name="AudioStreamPlayer2D" parent="Story Trigger" index="0"]
+stream = ExtResource("39_8c77d")
+
+[node name="Story Trigger2" parent="." instance=ExtResource("38_qaqrh")]
+position = Vector2(91, 828)
+
+[node name="AudioStreamPlayer2D" parent="Story Trigger2" index="0"]
+stream = ExtResource("39_7jq3c")
+
+[editable path="Story Trigger"]
+[editable path="Story Trigger2"]
