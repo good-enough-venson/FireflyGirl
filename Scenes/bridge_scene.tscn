@@ -630,17 +630,11 @@ position = Vector2(-699, 752)
 [node name="AudioStreamPlayer2D" parent="Story Trigger" index="0"]
 stream = ExtResource("39_8c77d")
 
-[node name="CollisionShape2D" parent="Story Trigger" index="1"]
-debug_color = Color(0.683191, 0.296489, 1, 0)
-
 [node name="Story Trigger2" parent="." instance=ExtResource("38_qaqrh")]
 position = Vector2(91, 828)
 
 [node name="AudioStreamPlayer2D" parent="Story Trigger2" index="0"]
 stream = ExtResource("39_7jq3c")
-
-[node name="CollisionShape2D" parent="Story Trigger2" index="1"]
-debug_color = Color(0.683191, 0.296489, 1, 0)
 
 [editable path="Story Trigger"]
 [editable path="Story Trigger2"]

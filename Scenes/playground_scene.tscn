@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://dygyqlykpidg1"]
+[gd_scene load_steps=30 format=4 uid="uid://dygyqlykpidg1"]
 
 [ext_resource type="Texture2D" uid="uid://doyfe6gthnbcr" path="res://Sprites/Playground_scene.png" id="1_gvm8f"]
 [ext_resource type="Texture2D" uid="uid://q86q3cniif6v" path="res://Sprites/FireflyGirl_Props_sheet.png" id="2_f1v4c"]
@@ -19,6 +19,11 @@
 [ext_resource type="PackedScene" uid="uid://dmfsu7uwkqt8g" path="res://Scenes/Obstacles/tree_4.tscn" id="17_anlgb"]
 [ext_resource type="PackedScene" uid="uid://cynenbvrjjco" path="res://Scenes/Obstacles/rock_7.tscn" id="18_fh00i"]
 [ext_resource type="PackedScene" uid="uid://cbcalylxhxhdp" path="res://Scenes/Obstacles/rock_6.tscn" id="19_dlyyr"]
+[ext_resource type="PackedScene" uid="uid://dmdc8r2bn7avq" path="res://Scenes/story_trigger.tscn" id="20_84iaw"]
+[ext_resource type="AudioStream" uid="uid://c46gnvsim0ed4" path="res://Audio/SFX/lines-004.ogg" id="21_vv604"]
+[ext_resource type="AudioStream" uid="uid://b8ep4s07s7bl4" path="res://Audio/SFX/lines-005.ogg" id="22_u0ddh"]
+[ext_resource type="AudioStream" uid="uid://d1vk4hwk6a151" path="res://Audio/SFX/lines-006.ogg" id="23_gie4p"]
+[ext_resource type="PackedScene" uid="uid://cmmmsbb7w4xyd" path="res://Scenes/soundtrack_volume_affector.tscn" id="24_07pfg"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_wwra8"]
 normal = Vector2(0, 1)
@@ -341,7 +346,7 @@ position = Vector2(-105, 57)
 
 [node name="WarpGate" parent="." instance=ExtResource("5_gsmt0")]
 position = Vector2(692, 104)
-metadata/linked_to = "pond_scene"
+metadata/linked_to = "bridge_scene"
 
 [node name="TileMapLayer2" type="TileMapLayer" parent="."]
 y_sort_enabled = true
@@ -362,7 +367,7 @@ position = Vector2(-509, 258)
 position = Vector2(-423, 253)
 
 [node name="Obstacle2" parent="." instance=ExtResource("11_w5tvk")]
-position = Vector2(-71, 195)
+position = Vector2(-564, 376)
 
 [node name="Obstacle3" parent="." instance=ExtResource("12_memcu")]
 position = Vector2(796, 368)
@@ -393,3 +398,35 @@ position = Vector2(-1082, 381)
 
 [node name="Obstacle9" parent="." instance=ExtResource("19_dlyyr")]
 position = Vector2(-759, 367)
+
+[node name="Story Trigger" parent="." instance=ExtResource("20_84iaw")]
+position = Vector2(-844, 136)
+
+[node name="AudioStreamPlayer2D" parent="Story Trigger" index="0"]
+stream = ExtResource("21_vv604")
+
+[node name="Story Trigger2" parent="." instance=ExtResource("20_84iaw")]
+position = Vector2(-575, 23)
+
+[node name="AudioStreamPlayer2D" parent="Story Trigger2" index="0"]
+stream = ExtResource("22_u0ddh")
+
+[node name="Story Trigger3" parent="." instance=ExtResource("20_84iaw")]
+position = Vector2(175, 20)
+
+[node name="AudioStreamPlayer2D" parent="Story Trigger3" index="0"]
+stream = ExtResource("23_gie4p")
+
+[node name="SoundtrackVolumeAffector" parent="." instance=ExtResource("24_07pfg")]
+position = Vector2(-118, -249)
+metadata/track_name = "pluck"
+metadata/volume_range = Vector2(-35, 0)
+
+[node name="SoundtrackVolumeAffector2" parent="." instance=ExtResource("24_07pfg")]
+position = Vector2(689, 97)
+metadata/track_name = "viola"
+metadata/volume_range = Vector2(-80, 0)
+
+[editable path="Story Trigger"]
+[editable path="Story Trigger2"]
+[editable path="Story Trigger3"]

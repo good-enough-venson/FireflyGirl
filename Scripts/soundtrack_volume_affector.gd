@@ -7,7 +7,7 @@ var valid_track_name = false
 var track_name = ""
 var volume_min = -80
 var volume_max = -80
-var initial_vol_set = false
+var initial_vol_set = true
 
 func _ready() -> void:
 	if not self.get_meta("track_name"): return

@@ -18,42 +18,41 @@ script = ExtResource("2_hvd2y")
 
 [node name="soundtrack_strum" type="AudioStreamPlayer" parent="SoundManager"]
 stream = ExtResource("2_xhbsm")
-volume_db = -80.0
+volume_db = -40.0
 autoplay = true
 bus = &"Strum"
 parameters/looping = true
 
 [node name="soundtrack_pluck" type="AudioStreamPlayer" parent="SoundManager"]
 stream = ExtResource("3_l2oxk")
-volume_db = -80.0
 autoplay = true
 bus = &"Pluck"
 parameters/looping = true
 
 [node name="soundtrack_chuck" type="AudioStreamPlayer" parent="SoundManager"]
 stream = ExtResource("4_iyouo")
-volume_db = -80.0
+volume_db = -40.0
 autoplay = true
 bus = &"Chuck"
 parameters/looping = true
 
 [node name="soundtrack_viola" type="AudioStreamPlayer" parent="SoundManager"]
 stream = ExtResource("5_luakf")
-volume_db = -80.0
+volume_db = -20.0
 autoplay = true
 bus = &"Viola"
 parameters/looping = true
 
 [node name="soundtrack_flute" type="AudioStreamPlayer" parent="SoundManager"]
 stream = ExtResource("6_yb0m0")
-volume_db = -80.0
+volume_db = -40.0
 autoplay = true
 bus = &"Flute"
 parameters/looping = true
 
 [node name="soundtrack_bells" type="AudioStreamPlayer" parent="SoundManager"]
 stream = ExtResource("7_26x64")
-volume_db = -80.0
+volume_db = -10.0
 autoplay = true
 bus = &"Bells"
 parameters/looping = true

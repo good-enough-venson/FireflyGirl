@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=4 uid="uid://uumv8kwxqpxj"]
+[gd_scene load_steps=47 format=4 uid="uid://uumv8kwxqpxj"]
 
 [ext_resource type="Texture2D" uid="uid://0odk6ufosfjp" path="res://Sprites/fireflygirl_forestbackground.png" id="1_oi688"]
 [ext_resource type="Texture2D" uid="uid://q86q3cniif6v" path="res://Sprites/FireflyGirl_Props_sheet.png" id="1_oy8td"]
@@ -41,6 +41,9 @@
 [ext_resource type="PackedScene" uid="uid://8pr7m2oy0mgg" path="res://Scenes/Plants/grass6.tscn" id="39_vctir"]
 [ext_resource type="PackedScene" uid="uid://tv3nq6pr8lns" path="res://Scenes/Plants/grass7.tscn" id="40_qpofy"]
 [ext_resource type="PackedScene" uid="uid://cmmmsbb7w4xyd" path="res://Scenes/soundtrack_volume_affector.tscn" id="41_d8yrb"]
+[ext_resource type="PackedScene" uid="uid://dmdc8r2bn7avq" path="res://Scenes/story_trigger.tscn" id="42_y7e0o"]
+[ext_resource type="AudioStream" uid="uid://dwjdugmkyxke" path="res://Audio/SFX/lines-012.ogg" id="43_sfif5"]
+[ext_resource type="AudioStream" uid="uid://b7knjpc0gh2tf" path="res://Audio/SFX/lines-013.ogg" id="44_qvit0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_31ptf"]
 texture = ExtResource("1_oy8td")
@@ -699,7 +702,7 @@ position = Vector2(1818, 121)
 
 [node name="WarpGate" parent="." instance=ExtResource("24_di0vk")]
 position = Vector2(1556, 128)
-metadata/linked_to = "menu_scene"
+metadata/linked_to = "endgame_scene"
 
 [node name="FireflyGirl" parent="." instance=ExtResource("22_ddyn5")]
 position = Vector2(-797, 213)
@@ -745,3 +748,18 @@ metadata/volume_range = Vector2(-80, -20)
 position = Vector2(-501, -375)
 metadata/track_name = "pluck"
 metadata/volume_range = Vector2(-55, -30)
+
+[node name="Story Trigger" parent="." instance=ExtResource("42_y7e0o")]
+position = Vector2(-295, 323)
+
+[node name="AudioStreamPlayer2D" parent="Story Trigger" index="0"]
+stream = ExtResource("43_sfif5")
+
+[node name="Story Trigger2" parent="." instance=ExtResource("42_y7e0o")]
+position = Vector2(528, 114)
+
+[node name="AudioStreamPlayer2D" parent="Story Trigger2" index="0"]
+stream = ExtResource("44_qvit0")
+
+[editable path="Story Trigger"]
+[editable path="Story Trigger2"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=4 uid="uid://cvlsjjhtofstm"]
+[gd_scene load_steps=42 format=4 uid="uid://cvlsjjhtofstm"]
 
 [ext_resource type="Texture2D" uid="uid://q86q3cniif6v" path="res://Sprites/FireflyGirl_Props_sheet.png" id="1_3l8m1"]
 [ext_resource type="PackedScene" uid="uid://cgpugc1q0xkq5" path="res://Scenes/firefly_girl.tscn" id="2_5ip45"]
@@ -35,6 +35,9 @@
 [ext_resource type="PackedScene" uid="uid://c3a53xtwt6rm5" path="res://Scenes/Plants/bonzai.tscn" id="32_jt3q2"]
 [ext_resource type="PackedScene" uid="uid://k6ubvalip41p" path="res://Scenes/Plants/grass.tscn" id="33_hq8l3"]
 [ext_resource type="PackedScene" uid="uid://cmmmsbb7w4xyd" path="res://Scenes/soundtrack_volume_affector.tscn" id="35_5k3dq"]
+[ext_resource type="PackedScene" uid="uid://dmdc8r2bn7avq" path="res://Scenes/story_trigger.tscn" id="36_yx0if"]
+[ext_resource type="AudioStream" uid="uid://coe7xcn0a2d2r" path="res://Audio/SFX/lines-010.ogg" id="37_8e1xw"]
+[ext_resource type="AudioStream" uid="uid://df1flxv1un12e" path="res://Audio/SFX/lines-011.ogg" id="38_qvosq"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_wwra8"]
 normal = Vector2(0, 1)
@@ -500,3 +503,18 @@ metadata/_edit_lock_ = true
 position = Vector2(1177, 167)
 metadata/track_name = "chuck"
 metadata/volume_range = Vector2(-80, -35)
+
+[node name="Story Trigger" parent="." instance=ExtResource("36_yx0if")]
+position = Vector2(-662, 299)
+
+[node name="AudioStreamPlayer2D" parent="Story Trigger" index="0"]
+stream = ExtResource("37_8e1xw")
+
+[node name="Story Trigger2" parent="." instance=ExtResource("36_yx0if")]
+position = Vector2(314, 210)
+
+[node name="AudioStreamPlayer2D" parent="Story Trigger2" index="0"]
+stream = ExtResource("38_qvosq")
+
+[editable path="Story Trigger"]
+[editable path="Story Trigger2"]
